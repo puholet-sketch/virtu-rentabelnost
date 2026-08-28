@@ -1,14 +1,39 @@
 /** VIRTU Rentabelnost — report page */
-document.querySelectorAll('.top__nav a[href^="#"]').forEach((link) => {
-  link.addEventListener('click', (e) => {
-    const id = link.getAttribute('href');
-    const el = document.querySelector(id);
-    if (el) {
-      e.preventDefault();
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+
+function bindSmoothNav(links) {
+  links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const id = link.getAttribute('href');
+      const el = document.querySelector(id);
+      if (el) {
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
   });
-});
+}
+
+bindSmoothNav(document.querySelectorAll('.top__nav a[href^="#"]'));
+bindSmoothNav(document.querySelectorAll('.top__nav-mobile a[href^="#"]'));
+
+/* Mobile nav toggle */
+const navToggle = document.querySelector('.nav-toggle');
+const navMobile = document.getElementById('report-nav-mobile');
+
+if (navToggle && navMobile) {
+  navToggle.addEventListener('click', () => {
+    const open = navMobile.hasAttribute('hidden');
+    navMobile.toggleAttribute('hidden', !open);
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  navMobile.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', () => {
+      navMobile.setAttribute('hidden', '');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
 
 /* PM tabs */
 const pmTabs = document.querySelectorAll('.pm-tab');
