@@ -1194,34 +1194,40 @@ a {
   overflow-x: auto;
   border: 1px solid var(--line);
   background: var(--surface);
+  -webkit-overflow-scrolling: touch;
 }
 
-.table-wrap table {
+.report table {
+  table-layout: auto;
   width: 100%;
   border-collapse: collapse;
   font-size: 0.84rem;
 }
 
-.table-wrap th {
+.report th,
+.report td {
+  vertical-align: middle;
+  padding: 0.5rem 0.75rem;
+}
+
+.report thead th {
+  text-align: inherit;
   background: var(--crimson);
   color: #fff;
-  text-align: left;
-  padding: 0.55rem 0.65rem;
   font-weight: 600;
   white-space: nowrap;
 }
 
-.table-wrap td {
-  padding: 0.5rem 0.65rem;
+.report tbody td {
   border-bottom: 1px solid var(--line);
-  vertical-align: top;
 }
 
-.table-wrap tbody tr:nth-child(even) {
+.report tbody tr:nth-child(even) {
   background: #fff0f0;
 }
 
-.num {
+.report th.num,
+.report td.num {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
@@ -2275,7 +2281,6 @@ html {
 }
 
 .fh-table td {
-  vertical-align: top;
   font-size: 0.88rem;
 }
 
