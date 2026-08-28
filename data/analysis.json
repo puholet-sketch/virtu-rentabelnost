@@ -31,7 +31,7 @@
     "dev_hours": 21629.081,
     "projects_delivery_count": 256,
     "projects_with_revenue": 255,
-    "methodology": "Сумма 10 top-level сегментов из consolidated PM KPI (646 строк, файл Кочеткова). Per-PM KPI — из отдельных PM slice-файлов (delivery, DEV>0, выручка>0); сумма PM slices ≠ portfolio (пересечения и разный scope). Период: 7 мес. (янв–июл 2026)."
+    "methodology": "Портфель компании (консолидировано, 7 мес.): сумма 10 top-level сегментов из consolidated PM KPI (646 строк, файл Кочеткова — свод по всем PM, не slice одного ПМа). Per-PM KPI — из отдельных PM slice-файлов (delivery, DEV>0, выручка>0); сумма PM slices ≠ portfolio (пересечения и разный scope)."
   },
   "waterfall": [
     {
@@ -88,7 +88,15 @@
       "profit": -1783192.8978343606,
       "margin_pct": -2.8,
       "dev_hours": 11545.331999999999,
-      "value_driver": "shrink"
+      "value_driver": "shrink",
+      "account_manager": "Клейн Татьяна Юрьевна",
+      "account_manager_hours": 68.6,
+      "sm_persons": {
+        "Клейн Татьяна Юрьевна": 68.6,
+        "Конкин Максим Сергеевич": 60.2
+      },
+      "client": "Other",
+      "client_detail": "Other"
     },
     {
       "segment": "Soglasie Mortgage",
@@ -96,7 +104,14 @@
       "profit": -7605557.558256194,
       "margin_pct": -35.6,
       "dev_hours": 5975.915,
-      "value_driver": "shrink"
+      "value_driver": "shrink",
+      "account_manager": "Клейн Татьяна Юрьевна",
+      "account_manager_hours": 504.8,
+      "sm_persons": {
+        "Клейн Татьяна Юрьевна": 504.8
+      },
+      "client": "Soglasie",
+      "client_detail": "Soglasie"
     },
     {
       "segment": "VSK Auto",
@@ -104,7 +119,14 @@
       "profit": 2955118.7983543286,
       "margin_pct": 26.4,
       "dev_hours": 1116.25,
-      "value_driver": "growth"
+      "value_driver": "growth",
+      "account_manager": "Конкин Максим Сергеевич",
+      "account_manager_hours": 592.3,
+      "sm_persons": {
+        "Конкин Максим Сергеевич": 592.3
+      },
+      "client": "VSK",
+      "client_detail": "VSK"
     },
     {
       "segment": "Soglasie Vita",
@@ -112,7 +134,15 @@
       "profit": -5309620.011414275,
       "margin_pct": -58.2,
       "dev_hours": 2514.834,
-      "value_driver": "shrink"
+      "value_driver": "shrink",
+      "account_manager": "Клейн Татьяна Юрьевна",
+      "account_manager_hours": 151.4,
+      "sm_persons": {
+        "Клейн Татьяна Юрьевна": 151.4,
+        "Конкин Максим Сергеевич": 75.9
+      },
+      "client": "Soglasie",
+      "client_detail": "Soglasie"
     },
     {
       "segment": "Sberbank ins. AUTO Licenses",
@@ -120,7 +150,12 @@
       "profit": 5653125.0,
       "margin_pct": 100.0,
       "dev_hours": 0,
-      "value_driver": "growth"
+      "value_driver": "growth",
+      "account_manager": null,
+      "account_manager_hours": null,
+      "sm_persons": {},
+      "client": "Sberbank",
+      "client_detail": "mng от 28.2.2026, mng от 30.4.2026, mng от 31.1.2026, mng от 31.3.2026"
     },
     {
       "segment": "Soglasie Bank",
@@ -128,7 +163,12 @@
       "profit": 1959180.545262115,
       "margin_pct": 43.9,
       "dev_hours": 476.74999999999994,
-      "value_driver": "growth"
+      "value_driver": "growth",
+      "account_manager": null,
+      "account_manager_hours": null,
+      "sm_persons": {},
+      "client": "Soglasie",
+      "client_detail": "84–87ли — банковский блок"
     },
     {
       "segment": "Equipment",
@@ -136,7 +176,12 @@
       "profit": 3987480.0,
       "margin_pct": 100.0,
       "dev_hours": 0,
-      "value_driver": "growth"
+      "value_driver": "growth",
+      "account_manager": null,
+      "account_manager_hours": null,
+      "sm_persons": {},
+      "client": "VSK",
+      "client_detail": "84–89тп — оборудование / техподдержка VSK"
     },
     {
       "segment": "Transactions",
@@ -144,7 +189,12 @@
       "profit": 600000.0,
       "margin_pct": 100.0,
       "dev_hours": 0,
-      "value_driver": "neutral"
+      "value_driver": "neutral",
+      "account_manager": null,
+      "account_manager_hours": null,
+      "sm_persons": {},
+      "client": "Gelios",
+      "client_detail": "счета 45–50ли-глс"
     },
     {
       "segment": "Licenses",
@@ -152,7 +202,15 @@
       "profit": 450000.0,
       "margin_pct": 100.0,
       "dev_hours": 0,
-      "value_driver": "neutral"
+      "value_driver": "neutral",
+      "account_manager": "Клейн Татьяна Юрьевна",
+      "account_manager_hours": 128.8,
+      "sm_persons": {
+        "Клейн Татьяна Юрьевна": 128.8,
+        "Конкин Максим Сергеевич": 24.6
+      },
+      "client": "MSG",
+      "client_detail": "счета 6–12ли-мсг25 (лицензии MSG)"
     },
     {
       "segment": "Professional Development Services",
@@ -160,7 +218,12 @@
       "profit": 77000.0,
       "margin_pct": 100.0,
       "dev_hours": 0,
-      "value_driver": "neutral"
+      "value_driver": "neutral",
+      "account_manager": null,
+      "account_manager_hours": null,
+      "sm_persons": {},
+      "client": "Various",
+      "client_detail": "обучение / PDS (вложенный sub-segment)"
     }
   ],
   "benchmarks": {
@@ -2936,7 +2999,8 @@
     ]
   },
   "methodology": {
-    "portfolio_scope": "Top-level сегменты (Commercial, Soglasie*, VSK, Licenses…)",
+    "portfolio_scope": "Top-level сегменты (Commercial, Soglasie*, VSK, Licenses…) — портфель компании, consolidated PM KPI (646 строк), 7 мес.",
+    "segments_scope_note": "Таблица «Сегменты» = весь портфель компании (консолидированный PM KPI), не персональный slice Кочеткова. Аккаунт (SM) — ФИО с макс. Time SM среди person-allocation строк в subtree сегмента.",
     "project_scope": "Leaf-проекты с DEV-часами или выручкой; исключены ФИО аллокаций и Gross Salaries",
     "pm_benchmarks": "PM>15.0% DEV, SM>10.0% DEV — red flag (только при DEV≥10ч)",
     "pm_files": {

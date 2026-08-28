@@ -1268,6 +1268,57 @@ a {
   border: 1px solid #f0d0d0;
 }
 
+.tag.tip,
+.tag.tag-tip {
+  border-bottom: none;
+  cursor: help;
+}
+
+.tag.tag-tip::after {
+  max-width: 300px;
+  white-space: normal;
+}
+
+.cause-legend {
+  margin: 1.75rem 0 0;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.cause-legend summary {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+}
+
+.cause-legend summary::-webkit-details-marker {
+  display: none;
+}
+
+.cause-legend summary::before {
+  content: "▸ ";
+  color: var(--crimson);
+}
+
+.cause-legend[open] summary::before {
+  content: "▾ ";
+}
+
+.cause-legend .legend-table {
+  font-size: 0.82rem;
+  margin-top: 0.75rem;
+}
+
+.cause-legend .legend-table code {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
 .driver {
   font-size: 0.78rem;
   font-weight: 600;
