@@ -799,7 +799,10 @@ a {
 
 .footer {
   border-top: 1px solid var(--line);
-  padding: 1.5rem var(--space) 2rem;
+  padding: 1rem var(--space) 1.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
 }
 
 .footer__inner {
@@ -863,13 +866,91 @@ a {
 .report {
   max-width: var(--max);
   margin: 0 auto;
-  padding: var(--space) var(--space) 4rem;
+  padding: 1rem var(--space) 3rem;
+}
+
+.report > .section {
+  max-width: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  scroll-margin-top: 4rem;
+}
+
+.report > .section:last-child {
+  margin-bottom: 0;
+}
+
+/* Compact hero — overrides educational full-viewport .hero */
+.report .hero {
+  position: static;
+  min-height: 0;
+  max-width: none;
+  margin: 0 0 1.5rem;
+  padding: 0 0 1rem;
+  display: block;
+  overflow: visible;
+  align-items: stretch;
+  border-bottom: 1px solid var(--line);
+}
+
+.report .hero__bg,
+.report .hero__visual,
+.report .hero__mesh,
+.report .hero__content {
+  display: none;
+}
+
+.report .hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 2.8vw, 2.25rem);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0.35rem 0 0.6rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
+.report .hero__eyebrow {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--crimson);
+  margin: 0;
+  font-weight: 600;
+}
+
+.report .hero__lead {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 52rem;
+  margin: 0 0 0.75rem;
+}
+
+.report .hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.5rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.report .hero__meta strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.top__inner {
+  padding: 0.65rem var(--space);
 }
 
 .top__nav {
   display: none;
-  gap: 1.25rem;
-  font-size: 0.82rem;
+  gap: 1rem;
+  font-size: 0.78rem;
 }
 
 .top__nav a {
@@ -882,49 +963,25 @@ a {
   color: var(--crimson);
 }
 
+.top .meta {
+  font-size: 0.75rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
 @media (min-width: 900px) {
   .top__nav {
     display: flex;
   }
 }
 
-.hero h1 {
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 3.5vw, 2.1rem);
-  color: var(--ink);
-  margin: 0.5rem 0 1rem;
-  line-height: 1.25;
+@media (max-width: 899px) {
+  .top .meta {
+    display: none;
+  }
 }
 
-.hero__eyebrow {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--crimson);
-  margin: 0;
-  font-weight: 600;
-}
-
-.hero__lead {
-  font-size: 1.05rem;
-  color: var(--muted);
-  max-width: 52rem;
-  margin: 0 0 1rem;
-}
-
-.hero__meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem 2rem;
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-.section {
-  margin-top: 2.5rem;
-}
-
-.section h2 {
+.report .section h2 {
   font-family: var(--font-display);
   font-size: 1.05rem;
   color: var(--crimson);
@@ -940,42 +997,43 @@ a {
   max-width: 48rem;
 }
 
-.section--exec {
+.report .section--exec {
   background: var(--surface);
   border: 1px solid var(--line);
   border-left: 4px solid var(--crimson);
-  padding: 1.25rem 1.5rem;
+  padding: 1.15rem 1.35rem;
 }
 
-.section--ink {
+.report .section--ink {
+  max-width: none;
   background: var(--ink);
   color: #e8e4e1;
-  padding: 1.5rem;
+  padding: 1.25rem 1.35rem;
   border-radius: var(--radius);
 }
 
-.section--ink h2 {
+.report .section--ink h2 {
   color: #fff;
   border-color: var(--ember);
 }
 
-.section--ink .section-lead {
+.report .section--ink .section-lead {
   color: #aaa;
 }
 
-.section--ink .table-wrap {
+.report .section--ink .table-wrap {
   border-color: rgba(255, 255, 255, 0.12);
 }
 
-.section--ink th {
+.report .section--ink th {
   background: var(--crimson-deep);
 }
 
-.section--ink tbody tr:nth-child(even) {
+.report .section--ink tbody tr:nth-child(even) {
   background: rgba(255, 255, 255, 0.04);
 }
 
-.section--ink td {
+.report .section--ink td {
   border-color: rgba(255, 255, 255, 0.08);
   color: #ddd;
 }
