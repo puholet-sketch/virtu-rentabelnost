@@ -1271,42 +1271,42 @@ a {
 }
 
 /* Risk signals — row backgrounds (scoped to report tables) */
-.report tr.sev-critical td {
+.report .section--risks tr.sev-critical td {
   background: var(--crimson-deep);
   color: #fff;
   border-color: rgba(255, 255, 255, 0.15);
 }
 
-.report tr.sev-critical .num.positive,
-.report tr.sev-critical .num.negative {
+.report .section--risks tr.sev-critical .num.positive,
+.report .section--risks tr.sev-critical .num.negative {
   color: #fff;
 }
 
-.report tr.sev-high td {
+.report .section--risks tr.sev-high td {
   background: #fff0f0;
   color: var(--ink);
   border-color: #f0d0d0;
 }
 
-.report tr.sev-high .num.positive {
+.report .section--risks tr.sev-high .num.positive {
   color: var(--crimson-deep);
 }
 
-.report tr.sev-high .num.negative {
+.report .section--risks tr.sev-high .num.negative {
   color: var(--crimson);
 }
 
-.report tr.sev-medium td {
+.report .section--risks tr.sev-medium td {
   background: #f5f5f5;
   color: var(--text);
   border-color: var(--line);
 }
 
-.report tr.sev-medium .num.positive {
+.report .section--risks tr.sev-medium .num.positive {
   color: var(--crimson-deep);
 }
 
-.report tr.sev-medium .num.negative {
+.report .section--risks tr.sev-medium .num.negative {
   color: var(--crimson);
 }
 
@@ -1327,7 +1327,7 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-.report tr.sev-critical .sev-badge.sev-critical {
+.report .section--risks tr.sev-critical .sev-badge.sev-critical {
   background: #fff;
   color: var(--crimson-deep);
   border-color: #fff;
