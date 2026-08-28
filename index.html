@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Рентабельность портфеля Virtu Systems — PM-отчёты, выручка и операционная прибыль." />
+  <title>VIRTU · Рентабельность</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .rent-wrap{max-width:1100px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
+    .rent-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.75rem;margin:1rem 0}
+    .rent-kpi div{background:#fff;border:1px solid var(--line);border-left:4px solid var(--crimson);padding:.85rem 1rem}
+    .rent-kpi strong{display:block;font-size:1.25rem;color:var(--ink)}
+    .rent-kpi span{font-size:.78rem;color:var(--muted)}
+    .rent-table{overflow-x:auto;border:1px solid var(--line);background:#fff;margin-top:.5rem}
+    .rent-table table{width:100%;border-collapse:collapse;font-size:.86rem}
+    .rent-table th{background:var(--crimson);color:#fff;text-align:left;padding:.55rem .65rem}
+    .rent-table td{padding:.5rem .65rem;border-bottom:1px solid var(--line)}
+    .rent-table tbody tr:nth-child(even){background:#FFF0F0}
+    .num{text-align:right;font-variant-numeric:tabular-nums}
+    .rent h1{font-family:Unbounded,system-ui,sans-serif;font-size:clamp(1.3rem,3vw,1.9rem)}
+    .rent h2{font-family:Unbounded,system-ui,sans-serif;font-size:1rem;color:var(--crimson);border-bottom:2px solid var(--crimson);margin:1.5rem 0 .6rem;padding-bottom:.3rem}
+    .note{font-size:.82rem;color:var(--muted)}
+  </style>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div class="top__inner">
+      <a class="brand" href="#top"><span class="brand__mark"></span>VIRTU · Rentability</a>
+      <span class="meta">Обновлено <span id="gen-date"></span></span>
+    </div>
+  </header>
+  <main class="rent-wrap rent" id="top">
+    <p class="meta">PMO · finance · analytics · virtu</p>
+    <h1>Рентабельность портфеля Virtu Systems</h1>
+    <p class="hero__lead">Сводка по месячным PM-выгрузкам (Revenues, Direct Expenses, Operating profit). Источник — корпоративные Excel за 7 месяцев наблюдения.</p>
+    <p class="meta">Последний период: <strong id="latest-period">—</strong></p>
+    <div class="rent-kpi">
+      <div><strong id="kpi-rev">—</strong><span>Выручка</span></div>
+      <div><strong id="kpi-profit">—</strong><span>Опер. прибыль</span></div>
+      <div><strong id="kpi-margin">—</strong><span>Маржа</span></div>
+      <div><strong id="kpi-exp">—</strong><span>Прямые расходы</span></div>
+    </div>
+    <h2>Топ проектов по выручке</h2>
+    <div class="rent-table"><table id="top-table"><thead><tr><th>Проект</th><th>Выручка</th><th>Прибыль</th><th>Маржа</th></tr></thead><tbody></tbody></table></div>
+    <p class="note">Служебные строки (support unallocated, Gross Salaries) исключены.</p>
+    <h2>Месяцы (PM KPI)</h2>
+    <div class="rent-table"><table id="months-table"><thead><tr><th>Период</th><th>Выручка</th><th>Прибыль</th><th>Строк</th></tr></thead><tbody></tbody></table></div>
+  </main>
+  <footer class="footer">Virtu Systems · демо-страница с агрегированными метриками</footer>
+</body>
+</html>
