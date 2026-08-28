@@ -7,14 +7,136 @@
     "main_file_note": "Consolidated PM KPI — свод по всем PM (646 строк)",
     "data_sources": [
       "Бактикова Фаина Родьсиловна.xlsx",
-      "Выгрузки (1).xlsx",
-      "Выгрузки (2).xlsx",
-      "Выгрузки (3).xlsx",
       "Выгрузки.xlsx",
       "Кочетков Никита Николаевич.xlsx",
       "Кузнецова Анастасия Витальевна.xlsx",
       "Сорванов Олег Николаевич.xlsx"
-    ]
+    ],
+    "source_root": "D:\\projects\\virtu-rentabelnost\\source",
+    "source_manifest": {
+      "sync_date": "2026-08-28",
+      "source_root": "D:\\projects\\virtu-rentabelnost\\source",
+      "folders": [
+        {
+          "name": "Бактикова",
+          "files": [
+            {
+              "name": "Бактикова Фаина Родьсиловна.xlsx",
+              "size": 34153,
+              "md5": "b9634be3588cff46704a5ba921670e65",
+              "folder": "Бактикова"
+            },
+            {
+              "name": "Выгрузки.xlsx",
+              "size": 4588133,
+              "md5": "94b6be0e8873711bd9f7b483e9924e4a",
+              "folder": "Бактикова"
+            }
+          ]
+        },
+        {
+          "name": "кочетков",
+          "files": [
+            {
+              "name": "Выгрузки.xlsx",
+              "size": 4588133,
+              "md5": "94b6be0e8873711bd9f7b483e9924e4a",
+              "folder": "кочетков"
+            },
+            {
+              "name": "Кочетков Никита Николаевич.xlsx",
+              "size": 161821,
+              "md5": "b2f0af9247ee418c2867ed0c4255244d",
+              "folder": "кочетков"
+            }
+          ]
+        },
+        {
+          "name": "Кузнецова",
+          "files": [
+            {
+              "name": "Выгрузки.xlsx",
+              "size": 4588133,
+              "md5": "94b6be0e8873711bd9f7b483e9924e4a",
+              "folder": "Кузнецова"
+            },
+            {
+              "name": "Кузнецова Анастасия Витальевна.xlsx",
+              "size": 71613,
+              "md5": "f9e282db8399de70cba5f1bad82cc104",
+              "folder": "Кузнецова"
+            }
+          ]
+        },
+        {
+          "name": "Сорванов",
+          "files": [
+            {
+              "name": "Выгрузки.xlsx",
+              "size": 4588133,
+              "md5": "94b6be0e8873711bd9f7b483e9924e4a",
+              "folder": "Сорванов"
+            },
+            {
+              "name": "Сорванов Олег Николаевич.xlsx",
+              "size": 74109,
+              "md5": "dd4f58548c15abeb1281b5a7e6287ebf",
+              "folder": "Сорванов"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "source": "D:\\projects\\virtu-rentabelnost\\source\\Бактикова\\Бактикова Фаина Родьсиловна.xlsx",
+          "dest": "Бактикова Фаина Родьсиловна.xlsx",
+          "md5": "b9634be3588cff46704a5ba921670e65"
+        },
+        {
+          "source": "D:\\projects\\virtu-rentabelnost\\source\\Бактикова\\Выгрузки.xlsx",
+          "dest": "Выгрузки.xlsx",
+          "md5": "94b6be0e8873711bd9f7b483e9924e4a"
+        },
+        {
+          "source": "D:\\projects\\virtu-rentabelnost\\source\\кочетков\\Кочетков Никита Николаевич.xlsx",
+          "dest": "Кочетков Никита Николаевич.xlsx",
+          "md5": "b2f0af9247ee418c2867ed0c4255244d"
+        },
+        {
+          "source": "D:\\projects\\virtu-rentabelnost\\source\\Кузнецова\\Кузнецова Анастасия Витальевна.xlsx",
+          "dest": "Кузнецова Анастасия Витальевна.xlsx",
+          "md5": "f9e282db8399de70cba5f1bad82cc104"
+        },
+        {
+          "source": "D:\\projects\\virtu-rentabelnost\\source\\Сорванов\\Сорванов Олег Николаевич.xlsx",
+          "dest": "Сорванов Олег Николаевич.xlsx",
+          "md5": "dd4f58548c15abeb1281b5a7e6287ebf"
+        }
+      ],
+      "dedup": {
+        "jira_exports": [
+          {
+            "skipped": "Выгрузки.xlsx",
+            "duplicate_of": "Выгрузки.xlsx"
+          },
+          {
+            "skipped": "Выгрузки.xlsx",
+            "duplicate_of": "Выгрузки.xlsx"
+          },
+          {
+            "skipped": "Выгрузки.xlsx",
+            "duplicate_of": "Выгрузки.xlsx"
+          }
+        ]
+      }
+    },
+    "source_folder_map": {
+      "Бактикова": "PM slice — Бактикова Фаина Родьсиловна.xlsx + Выгрузки.xlsx (JIRA)",
+      "Кочетков": "Consolidated PM KPI (646 строк) + PM slice — НЕ путать: портфель = сегменты из этого файла",
+      "Кузнецова": "PM slice — Кузнецова Анастасия Витальевна.xlsx + Выгрузки.xlsx (JIRA)",
+      "Сорванов": "PM slice — Сорванов Олег Николаевич.xlsx + Выгрузки.xlsx (JIRA); минус ≈ кластер RGS"
+    },
+    "dedup_note": "JIRA: 4 идентичные копии Выгрузки.xlsx (md5 совпадает) — в data/ одна. Портфель: top-level сегменты без двойного счёта. PM slices: delivery DEV>0, rev>0."
   },
   "executive_summary": [
     "Портфель за 7 мес. (PM KPI, сегменты без двойного счёта): выручка 120.8 млн ₽, опер. прибыль +1.0 млн ₽, маржа 0.8% — ниже типичных 15–25% для зрелых PS/SaaS-проектов.",
@@ -2882,51 +3004,665 @@
       "revenue": 1394173.4700000002
     }
   ],
+  "loss_investigations": [
+    {
+      "name": "Soglasie Mortgage",
+      "entity_type": "segment",
+      "loss_rub": -7605558.0,
+      "revenue": 21336546.0,
+      "profit": -7605557.558256194,
+      "margin_pct": -35.6,
+      "dev_hours": 5975.915,
+      "root_causes": [
+        "NEGATIVE_MARGIN"
+      ],
+      "facts": [
+        "Выручка 21.3 млн ₽, опер. прибыль -7.61 млн ₽ (маржа -35.6%)",
+        "DEV 5,976 ч",
+        "C/C DEV 4,169 ₽/ч",
+        "PM overhead 14.5% (866 ч PM)",
+        "SM overhead 8.4% (505 ч SM)",
+        "Infra 2.42 млн ₽ (11% выручки)",
+        "Средний C/C DEV в subtree: 3,989 ₽/ч",
+        "Аккаунт (SM): Клейн Татьяна Юрьевна"
+      ],
+      "hypotheses": [
+        {
+          "text": "Фиксированная цена контракта + 5 976 DEV-ч при C/C ~4 800 ₽/ч → себестоимость превышает выручку 21.3 млн ₽",
+          "confidence": "high",
+          "evidence": "Маржа −35.6%, DEV 5,976 ч, средний C/C в subtree 3989.0 ₽/ч"
+        },
+        {
+          "text": "Scope creep без change request — часы растут, выручка зафиксирована",
+          "confidence": "medium",
+          "evidence": "Высокая доля person-allocation строк в subtree; нет invoice-only выручки"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Финкомитет по «Soglasie Mortgage»: аудит scope vs контракт, freeze change requests без CR",
+          "owner": "CFO + SM",
+          "impact_rub": 2661945.0,
+          "how": "1) Выгрузить baseline estimate vs факт DEV-ч; 2) Список незакрытых CR; 3) Решение: reprice / cut scope / exit",
+          "priority": "critical"
+        },
+        {
+          "action": "Переговоры с Согласие: индексация ставки или перевод на T&M с cap",
+          "owner": "SM (Клейн) + CFO",
+          "impact_rub": 2281667.0,
+          "how": "Подготовить факт/план DEV-ч и C/C; показать gap к breakeven; предложить 2 сценария: +15% rate или −20% scope",
+          "priority": "critical"
+        }
+      ],
+      "client": "Soglasie",
+      "account_manager": "Клейн Татьяна Юрьевна"
+    },
+    {
+      "name": "Soglasie Vita",
+      "entity_type": "segment",
+      "loss_rub": -5309620.0,
+      "revenue": 9123075.0,
+      "profit": -5309620.011414275,
+      "margin_pct": -58.2,
+      "dev_hours": 2514.834,
+      "root_causes": [
+        "HIGH_PM_OVERHEAD",
+        "NEGATIVE_MARGIN",
+        "HIGH_INFRA"
+      ],
+      "facts": [
+        "Выручка 9.1 млн ₽, опер. прибыль -5.31 млн ₽ (маржа -58.2%)",
+        "DEV 2,515 ч",
+        "C/C DEV 4,662 ₽/ч",
+        "PM overhead 18.2% (457 ч PM)",
+        "SM overhead 6.0% (151 ч SM)",
+        "Infra 1.71 млн ₽ (19% выручки)",
+        "Средний C/C DEV в subtree: 5,099 ₽/ч",
+        "Аккаунт (SM): Клейн Татьяна Юрьевна"
+      ],
+      "hypotheses": [
+        {
+          "text": "Низкая цена / недооценка Vita-продуктов + высокий C/C DEV (до 7 400 ₽/ч на отдельных разработчиках)",
+          "confidence": "high",
+          "evidence": "Маржа −58.2%, DEV 2,515 ч, выручка всего 9.1 млн ₽"
+        },
+        {
+          "text": "Строка mng с отрицательной выручкой (−3.0 млн ₽) — возможный billing gap или корректировка",
+          "confidence": "medium",
+          "evidence": "Дочерняя строка «mng» с revenue<0 в PM KPI"
+        },
+        {
+          "text": "PM-оверхед выше нормы (15.0%) — избыточное управление или микро-проекты с высоким PM/DEV",
+          "confidence": "medium",
+          "evidence": "PM% > 15.0%, медиана портфеля 14.5%"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Финкомитет по «Soglasie Vita»: аудит scope vs контракт, freeze change requests без CR",
+          "owner": "CFO + SM",
+          "impact_rub": 1858367.0,
+          "how": "1) Выгрузить baseline estimate vs факт DEV-ч; 2) Список незакрытых CR; 3) Решение: reprice / cut scope / exit",
+          "priority": "critical"
+        },
+        {
+          "action": "Переговоры с Согласие: индексация ставки или перевод на T&M с cap",
+          "owner": "SM (Клейн) + CFO",
+          "impact_rub": 1592886.0,
+          "how": "Подготовить факт/план DEV-ч и C/C; показать gap к breakeven; предложить 2 сценария: +15% rate или −20% scope",
+          "priority": "critical"
+        },
+        {
+          "action": "Снизить PM-оверхед: объединить мелкие задачи, делегировать SM",
+          "owner": "PM",
+          "impact_rub": 182462.0,
+          "how": "Цель PM/DEV ≤12%; еженедельный time review; убрать PM с задач <40ч DEV",
+          "priority": "medium"
+        }
+      ],
+      "client": "Soglasie",
+      "account_manager": "Клейн Татьяна Юрьевна"
+    },
+    {
+      "name": "Rosgosstrakh Development",
+      "entity_type": "project",
+      "loss_rub": -3438877.0,
+      "revenue": 19875703.0,
+      "profit": -3438876.6304273605,
+      "margin_pct": -17.3,
+      "dev_hours": 4981.501,
+      "root_causes": [
+        "NEGATIVE_MARGIN"
+      ],
+      "facts": [
+        "Выручка 19.9 млн ₽, опер. прибыль -3.44 млн ₽ (маржа -17.3%)",
+        "DEV 4,982 ч",
+        "C/C DEV 5,303 ₽/ч",
+        "PM overhead 3.6% (180 ч PM)",
+        "SM overhead 4.9% (246 ч SM)",
+        "PM-владелец slice: Сорванов"
+      ],
+      "hypotheses": [
+        {
+          "text": "Кластер RGS: низкая маржа при большом объёме — unit economics хуже бенчмарка (Сорванов ≈0% на 120 млн ₽)",
+          "confidence": "high",
+          "evidence": "3 RGS delivery-проекта дают −4.8 млн ₽ совокупно в slice Сорванова"
+        },
+        {
+          "text": "Перерасход DEV-часов (4 982 ч) при C/C ~4 600 ₽/ч без достаточной наценки в ставке",
+          "confidence": "high",
+          "evidence": "Убыток -3.44 млн ₽ при выручке 19.9 млн ₽"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Пересмотр unit rate RGS-кластера: единая ставка DEV+outstaff, cap на часы",
+          "owner": "SM (Сорванов) + PMO",
+          "impact_rub": 1375551.0,
+          "how": "Собрать P&L 3 проектов (Development, Support, OFR NEW); предложить клиенту indexation или сокращение scope на Q4",
+          "priority": "critical"
+        }
+      ],
+      "pm": "Сорванов",
+      "client": "Rosgosstrakh/RGS"
+    },
+    {
+      "name": "Commercial",
+      "entity_type": "segment",
+      "loss_rub": -1783193.0,
+      "revenue": 63909803.129999995,
+      "profit": -1783192.8978343606,
+      "margin_pct": -2.8,
+      "dev_hours": 11545.331999999999,
+      "root_causes": [
+        "HIGH_PM_OVERHEAD",
+        "HIGH_SM_OVERHEAD",
+        "NEGATIVE_MARGIN"
+      ],
+      "facts": [
+        "Выручка 63.9 млн ₽, опер. прибыль -1.78 млн ₽ (маржа -2.8%)",
+        "DEV 11,545 ч",
+        "C/C DEV 4,594 ₽/ч",
+        "PM overhead 15.9% (1840 ч PM)",
+        "SM overhead 13.9% (1607 ч SM)",
+        "Infra 5.37 млн ₽ (8% выручки)",
+        "Средний C/C DEV в subtree: 4,622 ₽/ч",
+        "Аккаунт (SM): Клейн Татьяна Юрьевна"
+      ],
+      "hypotheses": [
+        {
+          "text": "Сегмент Commercial (−1.78 млн ₽) — крупнейший delivery-блок (63.9 млн ₽ выручки); убыток размазан по RGS и другим проектам при высоком PM+SM overhead (16%+14%)",
+          "confidence": "high",
+          "evidence": "Rosgosstrakh Development в subtree — основной именованный убыток; PM/SM overhead выше бенчмарка"
+        },
+        {
+          "text": "PM-оверхед выше нормы (15.0%) — избыточное управление или микро-проекты с высоким PM/DEV",
+          "confidence": "medium",
+          "evidence": "PM% > 15.0%, медиана портфеля 14.5%"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Финкомитет по «Commercial»: аудит scope vs контракт, freeze change requests без CR",
+          "owner": "CFO + SM",
+          "impact_rub": 624118.0,
+          "how": "1) Выгрузить baseline estimate vs факт DEV-ч; 2) Список незакрытых CR; 3) Решение: reprice / cut scope / exit",
+          "priority": "critical"
+        },
+        {
+          "action": "Снизить PM-оверхед: объединить мелкие задачи, делегировать SM",
+          "owner": "PM",
+          "impact_rub": 1278196.0,
+          "how": "Цель PM/DEV ≤12%; еженедельный time review; убрать PM с задач <40ч DEV",
+          "priority": "medium"
+        }
+      ],
+      "client": "Other",
+      "account_manager": "Клейн Татьяна Юрьевна"
+    },
+    {
+      "name": "Insight Mortgage",
+      "entity_type": "project",
+      "loss_rub": -952090.0,
+      "revenue": 280526.2899999999,
+      "profit": -952089.9701444093,
+      "margin_pct": -339.4,
+      "dev_hours": 21.5,
+      "root_causes": [
+        "NEGATIVE_MARGIN"
+      ],
+      "facts": [
+        "Выручка 0.3 млн ₽, опер. прибыль -0.95 млн ₽ (маржа -339.4%)",
+        "DEV 22 ч",
+        "C/C DEV 4,508 ₽/ч",
+        "PM overhead 12.7% (3 ч PM)",
+        "SM overhead nan% (nan ч SM)",
+        "PM-владелец slice: Кузнецова"
+      ],
+      "hypotheses": [
+        {
+          "text": "Цена ниже полной себестоимости: для маржи 15% нужно +1.0 млн ₽ прибыли",
+          "confidence": "medium",
+          "evidence": "Текущая маржа -339.4%"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Вывести на маржу 15%: +1.0 млн ₽ (reprice или −scope)",
+          "owner": "PM + SM",
+          "impact_rub": 994169.0,
+          "how": "Рассчитать breakeven DEV-ч; согласовать с клиентом change request или milestone cut",
+          "priority": "high"
+        }
+      ],
+      "pm": "Кузнецова",
+      "client": "Other"
+    },
+    {
+      "name": "Rosgosstrakh Support",
+      "entity_type": "project",
+      "loss_rub": -838674.0,
+      "revenue": 16400000.0,
+      "profit": -838674.1167640984,
+      "margin_pct": -5.1,
+      "dev_hours": 866.334,
+      "root_causes": [
+        "NEGATIVE_MARGIN"
+      ],
+      "facts": [
+        "Выручка 16.4 млн ₽, опер. прибыль -0.84 млн ₽ (маржа -5.1%)",
+        "DEV 866 ч",
+        "C/C DEV 5,684 ₽/ч",
+        "PM overhead nan% (nan ч PM)",
+        "SM overhead 6.0% (52 ч SM)",
+        "PM-владелец slice: Сорванов"
+      ],
+      "hypotheses": [
+        {
+          "text": "Кластер RGS: низкая маржа при большом объёме — unit economics хуже бенчмарка (Сорванов ≈0% на 120 млн ₽)",
+          "confidence": "high",
+          "evidence": "3 RGS delivery-проекта дают −4.8 млн ₽ совокупно в slice Сорванова"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Пересмотр unit rate RGS-кластера: единая ставка DEV+outstaff, cap на часы",
+          "owner": "SM (Сорванов) + PMO",
+          "impact_rub": 335470.0,
+          "how": "Собрать P&L 3 проектов (Development, Support, OFR NEW); предложить клиенту indexation или сокращение scope на Q4",
+          "priority": "critical"
+        }
+      ],
+      "pm": "Сорванов",
+      "client": "Rosgosstrakh/RGS"
+    },
+    {
+      "name": "NPF Soglasie",
+      "entity_type": "project",
+      "loss_rub": -755206.0,
+      "revenue": 2928710.0,
+      "profit": -755206.3177355654,
+      "margin_pct": -25.8,
+      "dev_hours": 699.4159999999999,
+      "root_causes": [
+        "HIGH_PM_OVERHEAD",
+        "HIGH_SM_OVERHEAD",
+        "NEGATIVE_MARGIN"
+      ],
+      "facts": [
+        "Выручка 2.9 млн ₽, опер. прибыль -0.76 млн ₽ (маржа -25.8%)",
+        "DEV 699 ч",
+        "C/C DEV 4,618 ₽/ч",
+        "PM overhead 16.0% (112 ч PM)",
+        "SM overhead 18.4% (129 ч SM)",
+        "PM-владелец slice: Кочетков"
+      ],
+      "hypotheses": [
+        {
+          "text": "PM-оверхед выше нормы (15.0%) — избыточное управление или микро-проекты с высоким PM/DEV",
+          "confidence": "medium",
+          "evidence": "PM% > 15.0%, медиана портфеля 14.5%"
+        },
+        {
+          "text": "Двойной оверхед PM+SM (16%+ SM) на ограниченном scope — управленческие издержки съедают маржу",
+          "confidence": "medium",
+          "evidence": "HIGH_PM_OVERHEAD + HIGH_SM_OVERHEAD"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Снизить PM-оверхед: объединить мелкие задачи, делегировать SM",
+          "owner": "PM",
+          "impact_rub": 58574.0,
+          "how": "Цель PM/DEV ≤12%; еженедельный time review; убрать PM с задач <40ч DEV",
+          "priority": "medium"
+        }
+      ],
+      "pm": "Кочетков",
+      "client": "Soglasie"
+    },
+    {
+      "name": "OutStaff (Geopolis)",
+      "entity_type": "project",
+      "loss_rub": -743267.0,
+      "revenue": 804800.0,
+      "profit": -743267.2021246674,
+      "margin_pct": -92.4,
+      "dev_hours": 241.25,
+      "root_causes": [
+        "NEGATIVE_MARGIN",
+        "HIGH_OUTSTAFF"
+      ],
+      "facts": [
+        "Выручка 0.8 млн ₽, опер. прибыль -0.74 млн ₽ (маржа -92.4%)",
+        "DEV 241 ч",
+        "C/C DEV 5,189 ₽/ч",
+        "PM overhead 9.5% (23 ч PM)",
+        "SM overhead nan% (nan ч SM)",
+        "Outstaff/прямые расходы 0.41 млн ₽ (51% выручки)",
+        "PM-владелец slice: Кузнецова"
+      ],
+      "hypotheses": [
+        {
+          "text": "Подрядчики дороже внутренней разработки или объём outstaff не заложен в цену контракта",
+          "confidence": "high",
+          "evidence": "Direct Expenses > 15–20% выручки"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Сократить outstaff на «OutStaff (Geopolis)» или переложить в цену",
+          "owner": "PM + Finance",
+          "impact_rub": 123540.0,
+          "how": "Сверить Direct Expenses с договорами подряда; заменить 20–30% на штат или включить в SOW",
+          "priority": "high"
+        }
+      ],
+      "pm": "Кузнецова",
+      "client": "Other"
+    },
+    {
+      "name": "VSK Mortgage",
+      "entity_type": "project",
+      "loss_rub": -562991.0,
+      "revenue": 156750.0,
+      "profit": -562990.7767871919,
+      "margin_pct": -359.2,
+      "dev_hours": 77.5,
+      "root_causes": [
+        "HIGH_SM_OVERHEAD",
+        "NEGATIVE_MARGIN"
+      ],
+      "facts": [
+        "Выручка 0.2 млн ₽, опер. прибыль -0.56 млн ₽ (маржа -359.2%)",
+        "DEV 78 ч",
+        "C/C DEV 5,446 ₽/ч",
+        "PM overhead 1.5% (1 ч PM)",
+        "SM overhead 79.5% (62 ч SM)",
+        "PM-владелец slice: Кузнецова"
+      ],
+      "hypotheses": [
+        {
+          "text": "Цена ниже полной себестоимости: для маржи 15% нужно +0.6 млн ₽ прибыли",
+          "confidence": "medium",
+          "evidence": "Текущая маржа -359.2%"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Вывести на маржу 15%: +0.6 млн ₽ (reprice или −scope)",
+          "owner": "PM + SM",
+          "impact_rub": 586503.0,
+          "how": "Рассчитать breakeven DEV-ч; согласовать с клиентом change request или milestone cut",
+          "priority": "high"
+        }
+      ],
+      "pm": "Кузнецова",
+      "client": "VSK"
+    },
+    {
+      "name": "Rosgosstrakh OFR NEW",
+      "entity_type": "project",
+      "loss_rub": -517899.0,
+      "revenue": 54129238.400000006,
+      "profit": -517899.38211607933,
+      "margin_pct": -1.0,
+      "dev_hours": 13111.001,
+      "root_causes": [
+        "NEGATIVE_MARGIN"
+      ],
+      "facts": [
+        "Выручка 54.1 млн ₽, опер. прибыль -0.52 млн ₽ (маржа -1.0%)",
+        "DEV 13,111 ч",
+        "C/C DEV 4,348 ₽/ч",
+        "PM overhead nan% (nan ч PM)",
+        "SM overhead 2.3% (298 ч SM)",
+        "Outstaff/прямые расходы 8.14 млн ₽ (15% выручки)",
+        "PM-владелец slice: Сорванов"
+      ],
+      "hypotheses": [
+        {
+          "text": "Кластер RGS: низкая маржа при большом объёме — unit economics хуже бенчмарка (Сорванов ≈0% на 120 млн ₽)",
+          "confidence": "high",
+          "evidence": "3 RGS delivery-проекта дают −4.8 млн ₽ совокупно в slice Сорванова"
+        },
+        {
+          "text": "Высокий outstaff (−8.1 млн ₽ Direct Expenses) при 54 млн ₽ выручки съедает маржу до −1%",
+          "confidence": "high",
+          "evidence": "HIGH_OUTSTAFF: Direct Expenses / Revenue > 15%"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Пересмотр unit rate RGS-кластера: единая ставка DEV+outstaff, cap на часы",
+          "owner": "SM (Сорванов) + PMO",
+          "impact_rub": 207160.0,
+          "how": "Собрать P&L 3 проектов (Development, Support, OFR NEW); предложить клиенту indexation или сокращение scope на Q4",
+          "priority": "critical"
+        }
+      ],
+      "pm": "Сорванов",
+      "client": "Rosgosstrakh/RGS"
+    },
+    {
+      "name": "MSG",
+      "entity_type": "project",
+      "loss_rub": -366208.0,
+      "revenue": 1198300.0,
+      "profit": -366208.1346332226,
+      "margin_pct": -30.6,
+      "dev_hours": 363.75,
+      "root_causes": [
+        "NEGATIVE_MARGIN"
+      ],
+      "facts": [
+        "Выручка 1.2 млн ₽, опер. прибыль -0.37 млн ₽ (маржа -30.6%)",
+        "DEV 364 ч",
+        "C/C DEV 4,628 ₽/ч",
+        "PM overhead 5.9% (21 ч PM)",
+        "SM overhead nan% (nan ч SM)",
+        "PM-владелец slice: Кочетков"
+      ],
+      "hypotheses": [
+        {
+          "text": "Цена ниже полной себестоимости: для маржи 15% нужно +0.5 млн ₽ прибыли",
+          "confidence": "medium",
+          "evidence": "Текущая маржа -30.6%"
+        }
+      ],
+      "recommendations": [
+        {
+          "action": "Вывести на маржу 15%: +0.5 млн ₽ (reprice или −scope)",
+          "owner": "PM + SM",
+          "impact_rub": 545953.0,
+          "how": "Рассчитать breakeven DEV-ч; согласовать с клиентом change request или milestone cut",
+          "priority": "high"
+        }
+      ],
+      "pm": "Кочетков",
+      "client": "Other"
+    }
+  ],
   "recommendations": [
     {
-      "action": "Финкомитет по сегменту «Soglasie Mortgage»: ставки, outstaff, Infra, scope freeze",
-      "estimated_impact_rub": 2281667.267476858,
+      "action": "Финкомитет по «Soglasie Mortgage»: аудит scope vs контракт, freeze change requests без CR",
+      "owner": "CFO + SM",
+      "impact_rub": 2661945.0,
+      "how": "1) Выгрузить baseline estimate vs факт DEV-ч; 2) Список незакрытых CR; 3) Решение: reprice / cut scope / exit",
       "priority": "critical",
+      "entity": "Soglasie Mortgage",
+      "entity_type": "segment",
       "area": "segment"
     },
     {
-      "action": "Финкомитет по сегменту «Soglasie Vita»: ставки, outstaff, Infra, scope freeze",
-      "estimated_impact_rub": 1592886.0034242824,
+      "action": "Переговоры с Согласие: индексация ставки или перевод на T&M с cap",
+      "owner": "SM (Клейн) + CFO",
+      "impact_rub": 2281667.0,
+      "how": "Подготовить факт/план DEV-ч и C/C; показать gap к breakeven; предложить 2 сценария: +15% rate или −20% scope",
       "priority": "critical",
+      "entity": "Soglasie Mortgage",
+      "entity_type": "segment",
       "area": "segment"
+    },
+    {
+      "action": "Финкомитет «Soglasie Mortgage»: ставки, outstaff, Infra, scope freeze",
+      "owner": "CFO + SM",
+      "impact_rub": 2281667.0,
+      "how": "См. раздел «Разбор убыточности» — факты и гипотезы по сегменту",
+      "priority": "critical",
+      "entity": "Soglasie Mortgage",
+      "entity_type": "segment",
+      "area": "segment"
+    },
+    {
+      "action": "Финкомитет по «Soglasie Vita»: аудит scope vs контракт, freeze change requests без CR",
+      "owner": "CFO + SM",
+      "impact_rub": 1858367.0,
+      "how": "1) Выгрузить baseline estimate vs факт DEV-ч; 2) Список незакрытых CR; 3) Решение: reprice / cut scope / exit",
+      "priority": "critical",
+      "entity": "Soglasie Vita",
+      "entity_type": "segment",
+      "area": "segment"
+    },
+    {
+      "action": "Финкомитет «Soglasie Vita»: ставки, outstaff, Infra, scope freeze",
+      "owner": "CFO + SM",
+      "impact_rub": 1592886.0,
+      "how": "См. раздел «Разбор убыточности» — факты и гипотезы по сегменту",
+      "priority": "critical",
+      "entity": "Soglasie Vita",
+      "entity_type": "segment",
+      "area": "segment"
+    },
+    {
+      "action": "Пересмотр unit rate RGS-кластера: единая ставка DEV+outstaff, cap на часы",
+      "owner": "SM (Сорванов) + PMO",
+      "impact_rub": 1375551.0,
+      "how": "Собрать P&L 3 проектов (Development, Support, OFR NEW); предложить клиенту indexation или сокращение scope на Q4",
+      "priority": "critical",
+      "entity": "Rosgosstrakh Development",
+      "entity_type": "project",
+      "area": "project"
+    },
+    {
+      "action": "Финкомитет по «Commercial»: аудит scope vs контракт, freeze change requests без CR",
+      "owner": "CFO + SM",
+      "impact_rub": 624118.0,
+      "how": "1) Выгрузить baseline estimate vs факт DEV-ч; 2) Список незакрытых CR; 3) Решение: reprice / cut scope / exit",
+      "priority": "critical",
+      "entity": "Commercial",
+      "entity_type": "segment",
+      "area": "segment"
+    },
+    {
+      "action": "Финкомитет «Commercial»: ставки, outstaff, Infra, scope freeze",
+      "owner": "CFO + SM",
+      "impact_rub": 534958.0,
+      "how": "См. раздел «Разбор убыточности» — факты и гипотезы по сегменту",
+      "priority": "critical",
+      "entity": "Commercial",
+      "entity_type": "segment",
+      "area": "segment"
+    },
+    {
+      "action": "Вывести на маржу 15%: +1.0 млн ₽ (reprice или −scope)",
+      "owner": "PM + SM",
+      "impact_rub": 994169.0,
+      "how": "Рассчитать breakeven DEV-ч; согласовать с клиентом change request или milestone cut",
+      "priority": "high",
+      "entity": "Insight Mortgage",
+      "entity_type": "project",
+      "area": "project"
+    },
+    {
+      "action": "Вывести на маржу 15%: +0.6 млн ₽ (reprice или −scope)",
+      "owner": "PM + SM",
+      "impact_rub": 586503.0,
+      "how": "Рассчитать breakeven DEV-ч; согласовать с клиентом change request или milestone cut",
+      "priority": "high",
+      "entity": "VSK Mortgage",
+      "entity_type": "project",
+      "area": "project"
+    },
+    {
+      "action": "Вывести на маржу 15%: +0.5 млн ₽ (reprice или −scope)",
+      "owner": "PM + SM",
+      "impact_rub": 545953.0,
+      "how": "Рассчитать breakeven DEV-ч; согласовать с клиентом change request или milestone cut",
+      "priority": "high",
+      "entity": "MSG",
+      "entity_type": "project",
+      "area": "project"
+    },
+    {
+      "action": "Сократить outstaff на «OutStaff (Geopolis)» или переложить в цену",
+      "owner": "PM + Finance",
+      "impact_rub": 123540.0,
+      "how": "Сверить Direct Expenses с договорами подряда; заменить 20–30% на штат или включить в SOW",
+      "priority": "high",
+      "entity": "OutStaff (Geopolis)",
+      "entity_type": "project",
+      "area": "project"
     },
     {
       "action": "Вывести на маржу 15.0%: HIGH_PM_OVERHEAD, HIGH_SM_OVERHEAD, NEGATIVE_MARGIN",
-      "estimated_impact_rub": 1194513.0,
+      "owner": "PM + SM",
+      "impact_rub": 1194513.0,
+      "how": "Рассчитать gap к 15% маржи; согласовать CR с клиентом",
       "priority": "medium",
-      "area": "project",
-      "project": "NPF Soglasie"
+      "entity": "NPF Soglasie",
+      "entity_type": "project",
+      "area": "project"
     },
     {
       "action": "Вывести на маржу 15.0%: NEGATIVE_MARGIN",
-      "estimated_impact_rub": 545953.0,
+      "owner": "PM + SM",
+      "impact_rub": 545953.0,
+      "how": "Рассчитать gap к 15% маржи; согласовать CR с клиентом",
       "priority": "medium",
-      "area": "project",
-      "project": "MSG"
-    },
-    {
-      "action": "Финкомитет по сегменту «Commercial»: ставки, outstaff, Infra, scope freeze",
-      "estimated_impact_rub": 534957.8693503082,
-      "priority": "critical",
-      "area": "segment"
+      "entity": "MSG",
+      "entity_type": "project",
+      "area": "project"
     },
     {
       "action": "Вывести на маржу 15.0%: HIGH_PM_OVERHEAD, HIGH_SM_OVERHEAD, NEGATIVE_MARGIN, HIGH_INFRA",
-      "estimated_impact_rub": 225946.0,
+      "owner": "PM + SM",
+      "impact_rub": 225946.0,
+      "how": "Рассчитать gap к 15% маржи; согласовать CR с клиентом",
       "priority": "medium",
-      "area": "project",
-      "project": "Gelios_Travel"
+      "entity": "Gelios_Travel",
+      "entity_type": "project",
+      "area": "project"
     },
     {
-      "action": "Снизить PM-оверхед на «NPF Soglasie» (PM 16.0%)",
-      "estimated_impact_rub": 113281.0,
+      "action": "Снизить PM-оверхед: объединить мелкие задачи, делегировать SM",
+      "owner": "PM",
+      "impact_rub": 182462.0,
+      "how": "Цель PM/DEV ≤12%; еженедельный time review; убрать PM с задач <40ч DEV",
       "priority": "medium",
-      "area": "overhead"
+      "entity": "Soglasie Vita",
+      "entity_type": "segment",
+      "area": "segment"
     }
   ],
   "monthly_trend": [],
@@ -2935,11 +3671,8 @@
     "note": "PM = полный год по проекту; PM KPI = с месяца старта (7 мес.)"
   },
   "jira": {
-    "file": "Выгрузки (1).xlsx",
+    "file": "Выгрузки.xlsx",
     "export_files": [
-      "Выгрузки (1).xlsx",
-      "Выгрузки (2).xlsx",
-      "Выгрузки (3).xlsx",
       "Выгрузки.xlsx"
     ],
     "export_files_note": "4 идентичные выгрузки JIRA — используется одна",
@@ -3015,9 +3748,29 @@
       "Файл Кочеткова (646 строк) = consolidated portfolio + его PM slice; для портфеля — сегменты, для PM — delivery в том же файле",
       "PM slice-файлы (Сорванов, Кузнецова, Бактикова) — отдельные выгрузки; сумма выручки PM slices (~180M) > portfolio (~121M) из-за разного scope",
       "Строки с ФИО — аллокация ФОТ, не проекты; исключены из топов, но влияют на PM-листы",
-      "Лицензии/счета (100% маржа, 0 DEV) — отдельный класс, не смешиваются с delivery margin",
-      "JIRA-выгрузки (4 файла) идентичны — 86 364 ч за период; cross-check с PM KPI DEV-часами ориентировочный",
-      "Месячный тренд — только по invoice-строкам Maintenance/лицензии, не полный P&L по месяцам"
+      "Лицензии: сегмент Licenses = счета MSG (6–12ли-мсг25); Sberbank ins. AUTO Licenses = отдельный сегмент Сбера",
+      "Сорванов минус ≈0% маржа = кластер Rosgosstrakh (Development −3.4M, Support −0.8M, OFR NEW −0.5M) vs прибыльные Travel/Impuls",
+      "JIRA-выгрузки (4 копии в source/, 1 в data/) идентичны — 86 364 ч; cross-check с PM KPI DEV-часами ориентировочный",
+      "Месячный тренд — только по invoice-строкам Maintenance/лицензии, не полный P&L по месяцам",
+      "Chulpan/микро-проекты с DEV<10ч: PM% ненадёжен (помечается pct_pm_note) — не использовать для выводов"
+    ],
+    "clarifications": [
+      {
+        "topic": "Portfolio vs PM slices",
+        "text": "Портфель (~121M ₽) = сумма 10 top-level сегментов из consolidated (Кочетков). Per-PM (~180M ₽ суммарно) = delivery в slice-файлах каждого PM. Числа НЕ должны совпадать."
+      },
+      {
+        "topic": "Почему Кочетков = consolidated",
+        "text": "Файл «Кочетков Никита Николаевич.xlsx» содержит 646 строк — полный свод PM KPI по всей компании. Для портфеля берём только top-level сегменты; для KPI Кочеткова как PM — его delivery-проекты."
+      },
+      {
+        "topic": "Licenses: MSG vs Sberbank",
+        "text": "Сегмент Licenses (100% маржа, 0 DEV) — преимущественно счета MSG. Sberbank ins. AUTO Licenses — отдельный сегмент с лицензиями Сбера. Не суммировать с delivery-маржой."
+      },
+      {
+        "topic": "Сорванов и минус",
+        "text": "Маржа Сорванова ≈0% при 120M выручки: убыток концентрирован в 3 проектах Rosgosstrakh (−4.8M), компенсируется Travel (+1.9M), Impuls (+1.0M), new GW (+1.5M)."
+      }
     ]
   },
   "appendix": {

@@ -2,7 +2,7 @@
   "meta": {
     "generated": "2026-08-28",
     "period": "7 месяцев (январь–июль 2026)",
-    "methodology": "Сумма 10 top-level сегментов из consolidated PM KPI (646 строк, файл Кочеткова). Per-PM KPI — из отдельных PM slice-файлов (delivery, DEV>0, выручка>0); сумма PM slices ≠ portfolio (пересечения и разный scope). Период: 7 мес. (янв–июл 2026).",
+    "methodology": "Портфель компании (консолидировано, 7 мес.): сумма 10 top-level сегментов из consolidated PM KPI (646 строк, файл Кочеткова — свод по всем PM, не slice одного ПМа). Per-PM KPI — из отдельных PM slice-файлов (delivery, DEV>0, выручка>0); сумма PM slices ≠ portfolio (пересечения и разный scope).",
     "pm_files": {
       "kochetkov": "Кочетков Никита Николаевич.xlsx",
       "sorvanov": "Сорванов Олег Николаевич.xlsx",

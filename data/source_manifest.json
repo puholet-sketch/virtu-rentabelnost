@@ -1,0 +1,117 @@
+{
+  "sync_date": "2026-08-28",
+  "source_root": "D:\\projects\\virtu-rentabelnost\\source",
+  "folders": [
+    {
+      "name": "Бактикова",
+      "files": [
+        {
+          "name": "Бактикова Фаина Родьсиловна.xlsx",
+          "size": 34153,
+          "md5": "b9634be3588cff46704a5ba921670e65",
+          "folder": "Бактикова"
+        },
+        {
+          "name": "Выгрузки.xlsx",
+          "size": 4588133,
+          "md5": "94b6be0e8873711bd9f7b483e9924e4a",
+          "folder": "Бактикова"
+        }
+      ]
+    },
+    {
+      "name": "кочетков",
+      "files": [
+        {
+          "name": "Выгрузки.xlsx",
+          "size": 4588133,
+          "md5": "94b6be0e8873711bd9f7b483e9924e4a",
+          "folder": "кочетков"
+        },
+        {
+          "name": "Кочетков Никита Николаевич.xlsx",
+          "size": 161821,
+          "md5": "b2f0af9247ee418c2867ed0c4255244d",
+          "folder": "кочетков"
+        }
+      ]
+    },
+    {
+      "name": "Кузнецова",
+      "files": [
+        {
+          "name": "Выгрузки.xlsx",
+          "size": 4588133,
+          "md5": "94b6be0e8873711bd9f7b483e9924e4a",
+          "folder": "Кузнецова"
+        },
+        {
+          "name": "Кузнецова Анастасия Витальевна.xlsx",
+          "size": 71613,
+          "md5": "f9e282db8399de70cba5f1bad82cc104",
+          "folder": "Кузнецова"
+        }
+      ]
+    },
+    {
+      "name": "Сорванов",
+      "files": [
+        {
+          "name": "Выгрузки.xlsx",
+          "size": 4588133,
+          "md5": "94b6be0e8873711bd9f7b483e9924e4a",
+          "folder": "Сорванов"
+        },
+        {
+          "name": "Сорванов Олег Николаевич.xlsx",
+          "size": 74109,
+          "md5": "dd4f58548c15abeb1281b5a7e6287ebf",
+          "folder": "Сорванов"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "source": "D:\\projects\\virtu-rentabelnost\\source\\Бактикова\\Бактикова Фаина Родьсиловна.xlsx",
+      "dest": "Бактикова Фаина Родьсиловна.xlsx",
+      "md5": "b9634be3588cff46704a5ba921670e65"
+    },
+    {
+      "source": "D:\\projects\\virtu-rentabelnost\\source\\Бактикова\\Выгрузки.xlsx",
+      "dest": "Выгрузки.xlsx",
+      "md5": "94b6be0e8873711bd9f7b483e9924e4a"
+    },
+    {
+      "source": "D:\\projects\\virtu-rentabelnost\\source\\кочетков\\Кочетков Никита Николаевич.xlsx",
+      "dest": "Кочетков Никита Николаевич.xlsx",
+      "md5": "b2f0af9247ee418c2867ed0c4255244d"
+    },
+    {
+      "source": "D:\\projects\\virtu-rentabelnost\\source\\Кузнецова\\Кузнецова Анастасия Витальевна.xlsx",
+      "dest": "Кузнецова Анастасия Витальевна.xlsx",
+      "md5": "f9e282db8399de70cba5f1bad82cc104"
+    },
+    {
+      "source": "D:\\projects\\virtu-rentabelnost\\source\\Сорванов\\Сорванов Олег Николаевич.xlsx",
+      "dest": "Сорванов Олег Николаевич.xlsx",
+      "md5": "dd4f58548c15abeb1281b5a7e6287ebf"
+    }
+  ],
+  "dedup": {
+    "jira_exports": [
+      {
+        "skipped": "Выгрузки.xlsx",
+        "duplicate_of": "Выгрузки.xlsx"
+      },
+      {
+        "skipped": "Выгрузки.xlsx",
+        "duplicate_of": "Выгрузки.xlsx"
+      },
+      {
+        "skipped": "Выгрузки.xlsx",
+        "duplicate_of": "Выгрузки.xlsx"
+      }
+    ]
+  }
+}
