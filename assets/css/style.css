@@ -1439,3 +1439,253 @@ a {
   color: var(--muted);
 }
 
+/* ── Tooltips ── */
+.tip {
+  position: relative;
+  cursor: help;
+  border-bottom: 1px dotted var(--crimson);
+  color: inherit;
+  font-weight: inherit;
+}
+
+.tip::after {
+  content: attr(data-tip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 260px;
+  padding: 0.5rem 0.65rem;
+  background: var(--ink);
+  color: #f5f5f5;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.4;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+  z-index: 100;
+}
+
+.tip::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 2px);
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--ink);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 101;
+}
+
+.tip:hover::after,
+.tip:hover::before,
+.tip:focus::after,
+.tip:focus::before,
+.tip.is-open::after,
+.tip.is-open::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (hover: none) {
+  .tip::after,
+  .tip::before {
+    display: none;
+  }
+}
+
+/* ── PM comparison cards ── */
+.pm-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.pm-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--muted);
+  padding: 1rem;
+}
+
+.pm-card--green {
+  border-top-color: var(--crimson-deep);
+}
+
+.pm-card--red {
+  border-top-color: var(--crimson);
+  background: #fffafa;
+}
+
+.pm-card--neutral {
+  border-top-color: var(--ember);
+}
+
+.pm-card h3 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.pm-card__kpi {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  margin-bottom: 0.35rem;
+}
+
+.pm-card__kpi span {
+  color: var(--muted);
+}
+
+.pm-card__eater {
+  margin: 0.75rem 0 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  padding-top: 0.5rem;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  padding: 0.1rem 0.35rem;
+  background: #f5f5f5;
+  border: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.badge--cons {
+  background: #fff0f0;
+  color: var(--crimson-deep);
+}
+
+/* ── PM tabs ── */
+.pm-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--line);
+  padding-bottom: 0.5rem;
+}
+
+.pm-tab {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--line);
+  border-bottom: none;
+  background: #faf9f8;
+  color: var(--muted);
+  cursor: pointer;
+  border-radius: var(--radius) var(--radius) 0 0;
+  transition: background 0.15s, color 0.15s;
+}
+
+.pm-tab:hover {
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.pm-tab.is-active {
+  background: var(--crimson);
+  color: #fff;
+  border-color: var(--crimson);
+}
+
+.pm-panel {
+  display: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 1.25rem;
+}
+
+.pm-panel.is-active {
+  display: block;
+}
+
+.pm-panel__head h3 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.kpi-grid--compact {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.kpi-value--sm {
+  font-size: 0.85rem !important;
+}
+
+.neutral-margin {
+  color: var(--ember);
+}
+
+.pm-compare-table tr.pm-card--green td:first-child {
+  border-left: 4px solid var(--crimson-deep);
+}
+
+.pm-compare-table tr.pm-card--red td:first-child {
+  border-left: 4px solid var(--crimson);
+}
+
+.section--sorvanov {
+  background: #fffafa;
+  border: 1px solid #f0d0d0;
+  border-left: 4px solid var(--crimson);
+  padding: 1.25rem 1.35rem;
+}
+
+.section--sorvanov .highlight {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.section--glossary {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 1.25rem 1.35rem;
+}
+
+.glossary {
+  display: grid;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 640px) {
+  .glossary {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.glossary dt {
+  font-weight: 700;
+  color: var(--crimson);
+}
+
+.glossary dd {
+  margin: 0 0 0.65rem;
+  color: var(--text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tip::after,
+  .tip::before {
+    transition: none;
+  }
+}
+
