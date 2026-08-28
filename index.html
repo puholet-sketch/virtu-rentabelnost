@@ -1,56 +1,177 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Рентабельность портфеля Virtu Systems — PM-отчёты, выручка и операционная прибыль." />
-  <title>VIRTU · Рентабельность</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    .rent-wrap{max-width:1100px;margin:0 auto;padding:1.5rem 1.25rem 3rem}
-    .rent-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.75rem;margin:1rem 0}
-    .rent-kpi div{background:#fff;border:1px solid var(--line);border-left:4px solid var(--crimson);padding:.85rem 1rem}
-    .rent-kpi strong{display:block;font-size:1.25rem;color:var(--ink)}
-    .rent-kpi span{font-size:.78rem;color:var(--muted)}
-    .rent-table{overflow-x:auto;border:1px solid var(--line);background:#fff;margin-top:.5rem}
-    .rent-table table{width:100%;border-collapse:collapse;font-size:.86rem}
-    .rent-table th{background:var(--crimson);color:#fff;text-align:left;padding:.55rem .65rem}
-    .rent-table td{padding:.5rem .65rem;border-bottom:1px solid var(--line)}
-    .rent-table tbody tr:nth-child(even){background:#FFF0F0}
-    .num{text-align:right;font-variant-numeric:tabular-nums}
-    .rent h1{font-family:Unbounded,system-ui,sans-serif;font-size:clamp(1.3rem,3vw,1.9rem)}
-    .rent h2{font-family:Unbounded,system-ui,sans-serif;font-size:1rem;color:var(--crimson);border-bottom:2px solid var(--crimson);margin:1.5rem 0 .6rem;padding-bottom:.3rem}
-    .note{font-size:.82rem;color:var(--muted)}
-  </style>
-  <script src="assets/js/main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Аналитический отчёт по рентабельности портфеля Virtu Systems">
+  <title>Virtu · Анализ рентабельности · 7 месяцев (январь–июль 2026)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header class="top">
     <div class="top__inner">
-      <a class="brand" href="#top"><span class="brand__mark"></span>VIRTU · Rentability</a>
-      <span class="meta">Обновлено <span id="gen-date"></span></span>
+      <a class="brand" href="#top"><span class="brand__mark"></span>VIRTU · Rentabelnost</a>
+      <nav class="top__nav">
+        <a href="#exec">Сводка</a>
+        <a href="#portfolio">Портфель</a>
+        <a href="#segments">Сегменты</a>
+        <a href="#projects">Проекты</a>
+        <a href="#pm">PM</a>
+        <a href="#risks">Риски</a>
+        <a href="#recs">Действия</a>
+      </nav>
+      <span class="meta">Обновлено 2026-08-28</span>
     </div>
   </header>
-  <main class="rent-wrap rent" id="top">
-    <p class="meta">PMO · finance · analytics · virtu</p>
-    <h1>Рентабельность портфеля Virtu Systems</h1>
-    <p class="hero__lead">Сводка по месячным PM-выгрузкам (Revenues, Direct Expenses, Operating profit). Источник — корпоративные Excel за 7 месяцев наблюдения.</p>
-    <p class="meta">Последний период: <strong id="latest-period">—</strong></p>
-    <div class="rent-kpi">
-      <div><strong id="kpi-rev">—</strong><span>Выручка</span></div>
-      <div><strong id="kpi-profit">—</strong><span>Опер. прибыль</span></div>
-      <div><strong id="kpi-margin">—</strong><span>Маржа</span></div>
-      <div><strong id="kpi-exp">—</strong><span>Прямые расходы</span></div>
-    </div>
-    <h2>Топ проектов по выручке</h2>
-    <div class="rent-table"><table id="top-table"><thead><tr><th>Проект</th><th>Выручка</th><th>Прибыль</th><th>Маржа</th></tr></thead><tbody></tbody></table></div>
-    <p class="note">Служебные строки (support unallocated, Gross Salaries) исключены.</p>
-    <h2>Месяцы (PM KPI)</h2>
-    <div class="rent-table"><table id="months-table"><thead><tr><th>Период</th><th>Выручка</th><th>Прибыль</th><th>Строк</th></tr></thead><tbody></tbody></table></div>
+
+  <main class="report" id="top">
+    <section class="hero">
+      <p class="hero__eyebrow">Финансовая аналитика · PMO · 7 месяцев (январь–июль 2026)</p>
+      <h1>Рентабельность портфеля проектов</h1>
+      <p class="hero__lead">Аналитический отчёт для финансового директа: структура прибыли, концентрация, unit economics и приоритетные меры — не просто SUM() по Excel.</p>
+      <div class="hero__meta">
+        <span>Источник: <strong>Кочетков Никита Николаевич.xlsx</strong></span>
+        <span>Метод: <strong>PM KPI</strong> (7 мес., без двойного счёта)</span>
+      </div>
+    </section>
+
+    <section id="exec" class="section section--exec">
+      <h2>1. Executive Summary</h2>
+      <p class="section-lead">Ключевые выводы для руководства — что происходит с портфелем и куда смотреть в первую очередь.</p>
+      <ul class='exec-list'><li>Портфель за 7 мес. (PM KPI, сегменты без двойного счёта): выручка 120.8 млн ₽, опер. прибыль +1.0 млн ₽, маржа 0.8% — ниже типичных 15–25% для зрелых PS/SaaS-проектов.</li><li>Главный драйвер убытка — сегмент «Soglasie Mortgage» (-7.6 млн ₽). Вместе убыточные сегменты Soglasie Mortgage + Vita + Commercial съедают 14.7 млн ₽ прибыли лицензий и VSK.</li><li>Парето: 6 проектов дают 80% выручки; крупнейший убыток среди delivery — «NPF Soglasie» (-0.8 млн ₽).</li><li>Концентрация клиентов: топ-3 = 95.3% выручки (лидер — Other, 57.1%). Риск зависимости от 1–2 страховых групп.</li><li>Разброс эффективности PM: Кузнецова Анастасия (17.4% маржа, 957 ₽/DEV-ч) vs Сорванов Олег (-0.1%) — не только объём, но и unit economics.</li><li>Потенциал улучшения: ~6.1 млн ₽ при выведении 5 проблемных проектов на маржу 15% или оптимизации аллокаций (оценка, не бюджет).</li></ul>
+    </section>
+
+    <section id="portfolio" class="section">
+      <h2>2. Портфель в цифрах</h2>
+      <p class="section-lead note">Сумма 10 top-level сегментов из consolidated PM KPI (646 строк, Кочетков). Без двойного счёта leaf + segment. Период: 7 мес. (янв–июл 2026).</p>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <span class="kpi-label">Выручка</span>
+          <span class="kpi-value">120.80 млн ₽</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Опер. прибыль</span>
+          <span class="kpi-value positive">+984 тыс ₽</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Маржа</span>
+          <span class="kpi-value positive">0.8%</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">DEV-часы</span>
+          <span class="kpi-value">21,629</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Delivery-проектов</span>
+          <span class="kpi-value">256</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Концентрация топ-3</span>
+          <span class="kpi-value">95.3%</span>
+        </div>
+      </div>
+      <div class="bench-row"><div class='bench-card'><span class='bench-label'>Медиана маржи</span><strong>6.8%</strong></div><div class='bench-card'><span class='bench-label'>C/C DEV (медиана)</span><strong>5228.0 ₽/ч</strong></div><div class='bench-card'><span class='bench-label'>% PM (медиана)</span><strong>14.5%</strong></div><div class='bench-card'><span class='bench-label'>% SM (медиана)</span><strong>66.5%</strong></div><div class='bench-card'><span class='bench-label'>Q1 маржа</span><strong>-13.0%</strong></div><div class='bench-card'><span class='bench-label'>Q3 маржа</span><strong>22.8%</strong></div></div>
+    </section>
+
+    <section class="section">
+      <h2>3. Waterfall — структура прибыли</h2>
+      <p class="section-lead">От выручки к операционной прибыли: ФОТ, Infra, overheads (top-level сегменты).</p>
+      <div class="waterfall">
+        <div class="wf-row wf-revenue"><span class="wf-label">Выручка</span><div class="wf-track"><div class="wf-bar" style="width:90.0%"></div></div><span class="wf-val">120.80 млн ₽</span></div>
+<div class="wf-row wf-cost"><span class="wf-label">ФОТ разработка</span><div class="wf-track"><div class="wf-bar" style="width:27.6%"></div></div><span class="wf-val">-37.07 млн ₽</span></div>
+<div class="wf-row wf-cost"><span class="wf-label">ФОТ PM</span><div class="wf-track"><div class="wf-bar" style="width:5.4%"></div></div><span class="wf-val">-7.27 млн ₽</span></div>
+<div class="wf-row wf-cost"><span class="wf-label">ФОТ аккаунт (SM)</span><div class="wf-track"><div class="wf-bar" style="width:5.6%"></div></div><span class="wf-val">-7.46 млн ₽</span></div>
+<div class="wf-row wf-cost"><span class="wf-label">ФОТ TS</span><div class="wf-track"><div class="wf-bar" style="width:2.7%"></div></div><span class="wf-val">-3.62 млн ₽</span></div>
+<div class="wf-row wf-cost"><span class="wf-label">Infra</span><div class="wf-track"><div class="wf-bar" style="width:7.1%"></div></div><span class="wf-val">-9.55 млн ₽</span></div>
+<div class="wf-row wf-cost"><span class="wf-label">Overheads / косвенные</span><div class="wf-track"><div class="wf-bar" style="width:40.9%"></div></div><span class="wf-val">-54.85 млн ₽</span></div>
+<div class="wf-row wf-profit"><span class="wf-label">Опер. прибыль</span><div class="wf-track"><div class="wf-bar" style="width:0.7%"></div></div><span class="wf-val">+984 тыс ₽</span></div>
+      </div>
+    </section>
+
+    <section id="segments" class="section">
+      <h2>4. Сегменты портфеля</h2>
+      <p class="section-lead">Кто создаёт и кто разрушает ценность — по business segments без двойного счёта.</p>
+      <div class='table-wrap'><table><thead><tr><th>Сегмент</th><th>Выручка</th><th>Опер. прибыль</th><th>Маржа</th><th>DEV ч</th><th>Динамика ценности</th></tr></thead><tbody><tr><td><strong>Commercial</strong></td><td class='num'>63.91 млн ₽</td><td class='num negative'>-1.78 млн ₽</td><td class='num negative'>-2.8%</td><td class='num'>11,545</td><td><span class='driver driver--shrink'>↓ сжатие</span></td></tr><tr><td><strong>Soglasie Mortgage</strong></td><td class='num'>21.34 млн ₽</td><td class='num negative'>-7.61 млн ₽</td><td class='num negative'>-35.6%</td><td class='num'>5,976</td><td><span class='driver driver--shrink'>↓ сжатие</span></td></tr><tr><td><strong>VSK Auto</strong></td><td class='num'>11.20 млн ₽</td><td class='num positive'>+2.96 млн ₽</td><td class='num positive'>26.4%</td><td class='num'>1,116</td><td><span class='driver driver--growth'>↑ рост</span></td></tr><tr><td><strong>Soglasie Vita</strong></td><td class='num'>9.12 млн ₽</td><td class='num negative'>-5.31 млн ₽</td><td class='num negative'>-58.2%</td><td class='num'>2,515</td><td><span class='driver driver--shrink'>↓ сжатие</span></td></tr><tr><td><strong>Sberbank ins. AUTO Licenses</strong></td><td class='num'>5.65 млн ₽</td><td class='num positive'>+5.65 млн ₽</td><td class='num positive'>100.0%</td><td class='num'>0</td><td><span class='driver driver--growth'>↑ рост</span></td></tr><tr><td><strong>Soglasie Bank</strong></td><td class='num'>4.46 млн ₽</td><td class='num positive'>+1.96 млн ₽</td><td class='num positive'>43.9%</td><td class='num'>477</td><td><span class='driver driver--growth'>↑ рост</span></td></tr><tr><td><strong>Equipment</strong></td><td class='num'>3.99 млн ₽</td><td class='num positive'>+3.99 млн ₽</td><td class='num positive'>100.0%</td><td class='num'>0</td><td><span class='driver driver--growth'>↑ рост</span></td></tr><tr><td><strong>Transactions</strong></td><td class='num'>600 тыс ₽</td><td class='num positive'>+600 тыс ₽</td><td class='num positive'>100.0%</td><td class='num'>0</td><td><span class='driver driver--neutral'>—</span></td></tr><tr><td><strong>Licenses</strong></td><td class='num'>450 тыс ₽</td><td class='num positive'>+450 тыс ₽</td><td class='num positive'>100.0%</td><td class='num'>0</td><td><span class='driver driver--neutral'>—</span></td></tr><tr><td><strong>Professional Development Services</strong></td><td class='num'>77 тыс ₽</td><td class='num positive'>+77 тыс ₽</td><td class='num positive'>100.0%</td><td class='num'>0</td><td><span class='driver driver--neutral'>—</span></td></tr></tbody></table></div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>5. Проекты: кто тянет вверх / кто в минус</h2>
+      <p class="section-lead">Delivery-проекты с root-cause тегами: overhead, C/C DEV, отсутствие выручки.</p>
+      <div class="two-col">
+        <div>
+          <h3 class="subhead">Топ-10 по прибыли</h3>
+          <div class='table-wrap'><table><thead><tr><th>Проект</th><th>Клиент</th><th>Выручка</th><th>Опер. прибыль</th><th>Маржа</th><th>DEV ч</th><th>Причины</th></tr></thead><tbody><tr><td>🟢 VSK DMS (Molev)</td><td>VSK</td><td class='num'>1.84 млн ₽</td><td class='num num positive'>+1.12 млн ₽</td><td class='num num'>60.9%</td><td class='num'>10</td><td class="causes"><span class="tag tag--cause">HIGH_SM_OVERHEAD</span></td></tr><tr><td>🟢 Soglasie Migrant</td><td>Soglasie</td><td class='num'>743 тыс ₽</td><td class='num num positive'>+378 тыс ₽</td><td class='num num'>50.9%</td><td class='num'>54</td><td class="causes"><span class="tag tag--cause">HIGH_PM_OVERHEAD</span></td></tr><tr><td>🟢 Solidarnost</td><td>Other</td><td class='num'>975 тыс ₽</td><td class='num num positive'>+320 тыс ₽</td><td class='num num'>32.9%</td><td class='num'>23</td><td class="causes"><span class="tag tag--cause">HIGH_SM_OVERHEAD</span></td></tr><tr><td>🟡 VSK BANK</td><td>VSK</td><td class='num'>1.39 млн ₽</td><td class='num num positive'>+136 тыс ₽</td><td class='num num'>9.7%</td><td class='num'>4</td><td class="causes"><span class="tag tag--cause">HIGH_SM_OVERHEAD</span> <span class="tag tag--cause">HIGH_CC_DEV</span> <span class="tag tag--cause">LOW_MARGIN</span> <span class="tag tag--cause">HIGH_INFRA</span></td></tr><tr><td>🟢 Sberbank ins. AUTO KASKO</td><td>Sberbank</td><td class='num'>597 тыс ₽</td><td class='num num positive'>+76 тыс ₽</td><td class='num num'>12.7%</td><td class='num'>65</td><td class="causes"><span class="tag tag--cause">HIGH_SM_OVERHEAD</span></td></tr><tr><td>🟡 Sberbank ins. AUTO OSAGO</td><td>Sberbank</td><td class='num'>882 тыс ₽</td><td class='num num positive'>+60 тыс ₽</td><td class='num num'>6.8%</td><td class='num'>168</td><td class="causes"><span class="tag tag--cause">LOW_MARGIN</span></td></tr><tr><td>🟡 Chulpan</td><td>Other</td><td class='num'>90 тыс ₽</td><td class='num num positive'>+3 тыс ₽</td><td class='num num'>3.1%</td><td class='num'>1</td><td class="causes"><span class="tag tag--cause">HIGH_PM_OVERHEAD</span> <span class="tag tag--cause">LOW_MARGIN</span></td></tr></tbody></table></div>
+        </div>
+        <div>
+          <h3 class="subhead">Топ-10 убыточных</h3>
+          <div class='table-wrap'><table><thead><tr><th>Проект</th><th>Клиент</th><th>Выручка</th><th>Опер. прибыль</th><th>Маржа</th><th>DEV ч</th><th>Причины</th></tr></thead><tbody><tr><td>🔴 NPF Soglasie</td><td>Soglasie</td><td class='num'>2.93 млн ₽</td><td class='num num negative'>-755 тыс ₽</td><td class='num num negative'>-25.8%</td><td class='num'>699</td><td class="causes"><span class="tag tag--cause">HIGH_PM_OVERHEAD</span> <span class="tag tag--cause">HIGH_SM_OVERHEAD</span> <span class="tag tag--cause">NEGATIVE_MARGIN</span></td></tr><tr><td>🔴 MSG</td><td>Other</td><td class='num'>1.20 млн ₽</td><td class='num num negative'>-366 тыс ₽</td><td class='num num negative'>-30.6%</td><td class='num'>364</td><td class="causes"><span class="tag tag--cause">NEGATIVE_MARGIN</span></td></tr><tr><td>🔴 Gelios_Travel</td><td>Gelios</td><td class='num'>1.49 млн ₽</td><td class='num num negative'>-3 тыс ₽</td><td class='num num negative'>-0.2%</td><td class='num'>63</td><td class="causes"><span class="tag tag--cause">HIGH_PM_OVERHEAD</span> <span class="tag tag--cause">HIGH_SM_OVERHEAD</span> <span class="tag tag--cause">NEGATIVE_MARGIN</span> <span class="tag tag--cause">HIGH_INFRA</span></td></tr></tbody></table></div>
+        </div>
+      </div>
+      <p class="note">Парето: 6 проектов ≈ 80% выручки delivery-слоя.</p>
+    </section>
+
+    <section id="pm" class="section">
+      <h2>6. Эффективность PM</h2>
+      <p class="section-lead">Сравнительный анализ: маржа, % PM/SM overhead, C/C DEV, прибыль на DEV-час — не только totals.</p>
+      <div class='table-wrap'><table><thead><tr><th>PM</th><th>Проектов</th><th>Выручка</th><th>Опер. прибыль</th><th>Маржа</th><th>% PM</th><th>% SM</th><th>C/C DEV</th><th>₽/DEV-ч</th><th>vs медиана</th></tr></thead><tbody><tr><td><strong>Кузнецова Анастасия</strong></td><td class='num'>6</td><td class='num'>43.14 млн ₽</td><td class='num positive'>+7.50 млн ₽</td><td class='num positive'>17.4%</td><td class='num'>13.2%</td><td class='num'>5.4%</td><td class='num'>4848.0</td><td class='num'>957 ₽</td><td class='muted'>выше медианы</td></tr><tr><td><strong>Бактикова Фаина</strong></td><td class='num'>3</td><td class='num'>5.36 млн ₽</td><td class='num positive'>+492 тыс ₽</td><td class='num positive'>9.2%</td><td class='num'>0.0</td><td class='num'>17.2%</td><td class='num'>4781.0</td><td class='num'>496 ₽</td><td class='muted'>—</td></tr><tr><td><strong>Сорванов Олег</strong></td><td class='num'>8</td><td class='num'>119.56 млн ₽</td><td class='num negative'>-171 тыс ₽</td><td class='num negative'>-0.1%</td><td class='num'>0.7%</td><td class='num'>3.2%</td><td class='num'>5303.0</td><td class='num'>-7 ₽</td><td class='muted'>ниже медианы</td></tr></tbody></table></div>
+    </section>
+
+    <section id="risks" class="section section--ink">
+      <h2>7. Сигналы риска</h2>
+      <p class="section-lead">Red flags: PM&gt;15%, SM&gt;10%, отрицательная маржа, концентрация клиентов.</p>
+      <div class='table-wrap'><table><thead><tr><th>Объект</th><th>Сигнал</th><th>Уровень</th><th>Прибыль</th></tr></thead><tbody><tr class='sev-critical'><td>Gelios_Travel</td><td>Отрицательная маржа</td><td><span class='sev-badge sev-critical'>critical</span></td><td class='num'>-3 тыс ₽</td></tr><tr class='sev-critical'><td>MSG</td><td>Отрицательная маржа</td><td><span class='sev-badge sev-critical'>critical</span></td><td class='num'>-366 тыс ₽</td></tr><tr class='sev-critical'><td>NPF Soglasie</td><td>Отрицательная маржа</td><td><span class='sev-badge sev-critical'>critical</span></td><td class='num'>-755 тыс ₽</td></tr><tr class='sev-high'><td>Chulpan</td><td>PM &gt;15.0% DEV</td><td><span class='sev-badge sev-high'>high</span></td><td class='num'>+3 тыс ₽</td></tr><tr class='sev-high'><td>Gelios_Travel</td><td>PM &gt;15.0% DEV</td><td><span class='sev-badge sev-high'>high</span></td><td class='num'>-3 тыс ₽</td></tr><tr class='sev-high'><td>Gelios_Travel</td><td>SM &gt;10.0% DEV</td><td><span class='sev-badge sev-high'>high</span></td><td class='num'>-3 тыс ₽</td></tr><tr class='sev-high'><td>NPF Soglasie</td><td>PM &gt;15.0% DEV</td><td><span class='sev-badge sev-high'>high</span></td><td class='num'>-755 тыс ₽</td></tr><tr class='sev-high'><td>NPF Soglasie</td><td>SM &gt;10.0% DEV</td><td><span class='sev-badge sev-high'>high</span></td><td class='num'>-755 тыс ₽</td></tr><tr class='sev-high'><td>Sberbank ins. AUTO KASKO</td><td>SM &gt;10.0% DEV</td><td><span class='sev-badge sev-high'>high</span></td><td class='num'>+76 тыс ₽</td></tr><tr class='sev-high'><td>Soglasie Migrant</td><td>PM &gt;15.0% DEV</td><td><span class='sev-badge sev-high'>high</span></td><td class='num'>+378 тыс ₽</td></tr><tr class='sev-high'><td>Solidarnost</td><td>SM &gt;10.0% DEV</td><td><span class='sev-badge sev-high'>high</span></td><td class='num'>+320 тыс ₽</td></tr><tr class='sev-high'><td>VSK BANK</td><td>SM &gt;10.0% DEV</td><td><span class='sev-badge sev-high'>high</span></td><td class='num'>+136 тыс ₽</td></tr><tr class='sev-high'><td>VSK DMS (Molev)</td><td>SM &gt;10.0% DEV</td><td><span class='sev-badge sev-high'>high</span></td><td class='num'>+1.12 млн ₽</td></tr><tr class='sev-high'><td>Other</td><td>Концентрация: топ-3 клиента = 95.3% выручки</td><td><span class='sev-badge sev-high'>high</span></td><td class='num'>—</td></tr><tr class='sev-medium'><td>VSK BANK</td><td>C/C DEV выше Q3</td><td><span class='sev-badge sev-medium'>medium</span></td><td class='num'>+136 тыс ₽</td></tr></tbody></table></div>
+    </section>
+
+    <section id="recs" class="section">
+      <h2>8. Рекомендации</h2>
+      <p class="section-lead">Приоритетные действия с оценкой эффекта в ₽ (ориентир, не бюджет).</p>
+      <ol class='rec-list'><li class='rec rec--critical'><span class='rec-num'>1</span><div class='rec-body'><p>Финкомитет по сегменту «Soglasie Mortgage»: ставки, outstaff, Infra, scope freeze</p><span class='rec-impact'>≈ 2.28 млн ₽</span></div></li><li class='rec rec--critical'><span class='rec-num'>2</span><div class='rec-body'><p>Финкомитет по сегменту «Soglasie Vita»: ставки, outstaff, Infra, scope freeze</p><span class='rec-impact'>≈ 1.59 млн ₽</span></div></li><li class='rec rec--medium'><span class='rec-num'>3</span><div class='rec-body'><p>Вывести на маржу 15.0%: HIGH_PM_OVERHEAD, HIGH_SM_OVERHEAD, NEGATIVE_MARGIN</p><span class='rec-impact'>≈ 1.19 млн ₽</span></div></li><li class='rec rec--medium'><span class='rec-num'>4</span><div class='rec-body'><p>Вывести на маржу 15.0%: NEGATIVE_MARGIN</p><span class='rec-impact'>≈ 546 тыс ₽</span></div></li><li class='rec rec--critical'><span class='rec-num'>5</span><div class='rec-body'><p>Финкомитет по сегменту «Commercial»: ставки, outstaff, Infra, scope freeze</p><span class='rec-impact'>≈ 535 тыс ₽</span></div></li><li class='rec rec--medium'><span class='rec-num'>6</span><div class='rec-body'><p>Вывести на маржу 15.0%: HIGH_PM_OVERHEAD, HIGH_SM_OVERHEAD, NEGATIVE_MARGIN, HIGH_INFRA</p><span class='rec-impact'>≈ 226 тыс ₽</span></div></li><li class='rec rec--medium'><span class='rec-num'>7</span><div class='rec-body'><p>Снизить PM-оверхед на «NPF Soglasie» (PM 16.0%)</p><span class='rec-impact'>≈ 113 тыс ₽</span></div></li><li class='rec rec--medium'><span class='rec-num'>8</span><div class='rec-body'><p>Снизить PM-оверхед на «Chulpan» (PM 1720.0%)</p><span class='rec-impact'>≈ 2 тыс ₽</span></div></li><li class='rec rec--medium'><span class='rec-num'>9</span><div class='rec-body'><p>Снизить PM-оверхед на «Gelios_Travel» (PM 105.5%)</p><span class='rec-impact'>≈ 434 ₽</span></div></li></ol>
+    </section>
+
+    <section class="section section--method">
+      <h2>9. Методология и ограничения</h2>
+      <dl class="method-dl">
+        <dt>Портфель</dt><dd>Top-level сегменты (Commercial, Soglasie*, VSK, Licenses…)</dd>
+        <dt>Проекты</dt><dd>Leaf-проекты с DEV-часами или выручкой; исключены ФИО аллокаций и Gross Salaries</dd>
+        <dt>Бенчмарки</dt><dd>PM&gt;15.0% DEV, SM&gt;10.0% DEV — red flag</dd>
+        <dt>PM vs PM KPI</dt><dd>PM = полный год по проекту; PM KPI = с месяца старта (7 мес.) — расхождение -4.17 млн ₽.</dd>
+      </dl>
+      <ul class="limits">
+        <li>Кочетков 646 строк = consolidated; PM-файлы (Кузнецова, Сорванов, Бактикова) частично пересекаются</li><li>Строки с ФИО — аллокация ФОТ, не проекты; исключены из топов, но влияют на PM-листы</li><li>Лицензии/счета (100% маржа, 0 DEV) — отдельный класс, не смешиваются с delivery margin</li><li>Месячный тренд — только по invoice-строкам Maintenance/лицензии, не полный P&amp;L по месяцам</li>
+      </ul>
+      <p class="note">JIRA: 50,140 записей, 86,364 ч, период 2026-01-01 — 2026-12-31.</p>
+    </section>
+
+    <section class="section section--appendix">
+      <h2>10. Приложение</h2>
+      <details>
+        <summary>Flagged projects (9)</summary>
+        <div class='table-wrap'><table><thead><tr><th>Проект</th><th>Клиент</th><th>Выручка</th><th>Опер. прибыль</th><th>Маржа</th><th>DEV ч</th><th>Причины</th></tr></thead><tbody><tr><td>🟡 Chulpan</td><td>Other</td><td class='num'>90 тыс ₽</td><td class='num num positive'>+3 тыс ₽</td><td class='num num'>3.1%</td><td class='num'>1</td><td class="causes"><span class="tag tag--cause">HIGH_PM_OVERHEAD</span> <span class="tag tag--cause">LOW_MARGIN</span></td></tr><tr><td>🔴 Gelios_Travel</td><td>Gelios</td><td class='num'>1.49 млн ₽</td><td class='num num negative'>-3 тыс ₽</td><td class='num num negative'>-0.2%</td><td class='num'>63</td><td class="causes"><span class="tag tag--cause">HIGH_PM_OVERHEAD</span> <span class="tag tag--cause">HIGH_SM_OVERHEAD</span> <span class="tag tag--cause">NEGATIVE_MARGIN</span> <span class="tag tag--cause">HIGH_INFRA</span></td></tr><tr><td>🔴 MSG</td><td>Other</td><td class='num'>1.20 млн ₽</td><td class='num num negative'>-366 тыс ₽</td><td class='num num negative'>-30.6%</td><td class='num'>364</td><td class="causes"><span class="tag tag--cause">NEGATIVE_MARGIN</span></td></tr><tr><td>🔴 NPF Soglasie</td><td>Soglasie</td><td class='num'>2.93 млн ₽</td><td class='num num negative'>-755 тыс ₽</td><td class='num num negative'>-25.8%</td><td class='num'>699</td><td class="causes"><span class="tag tag--cause">HIGH_PM_OVERHEAD</span> <span class="tag tag--cause">HIGH_SM_OVERHEAD</span> <span class="tag tag--cause">NEGATIVE_MARGIN</span></td></tr><tr><td>🟢 Sberbank ins. AUTO KASKO</td><td>Sberbank</td><td class='num'>597 тыс ₽</td><td class='num num positive'>+76 тыс ₽</td><td class='num num'>12.7%</td><td class='num'>65</td><td class="causes"><span class="tag tag--cause">HIGH_SM_OVERHEAD</span></td></tr><tr><td>🟢 Soglasie Migrant</td><td>Soglasie</td><td class='num'>743 тыс ₽</td><td class='num num positive'>+378 тыс ₽</td><td class='num num'>50.9%</td><td class='num'>54</td><td class="causes"><span class="tag tag--cause">HIGH_PM_OVERHEAD</span></td></tr><tr><td>🟢 Solidarnost</td><td>Other</td><td class='num'>975 тыс ₽</td><td class='num num positive'>+320 тыс ₽</td><td class='num num'>32.9%</td><td class='num'>23</td><td class="causes"><span class="tag tag--cause">HIGH_SM_OVERHEAD</span></td></tr><tr><td>🟡 VSK BANK</td><td>VSK</td><td class='num'>1.39 млн ₽</td><td class='num num positive'>+136 тыс ₽</td><td class='num num'>9.7%</td><td class='num'>4</td><td class="causes"><span class="tag tag--cause">HIGH_SM_OVERHEAD</span> <span class="tag tag--cause">HIGH_CC_DEV</span> <span class="tag tag--cause">LOW_MARGIN</span> <span class="tag tag--cause">HIGH_INFRA</span></td></tr><tr><td>🟢 VSK DMS (Molev)</td><td>VSK</td><td class='num'>1.84 млн ₽</td><td class='num num positive'>+1.12 млн ₽</td><td class='num num'>60.9%</td><td class='num'>10</td><td class="causes"><span class="tag tag--cause">HIGH_SM_OVERHEAD</span></td></tr></tbody></table></div>
+      </details>
+      <details>
+        <summary>Концентрация по клиентам</summary>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Клиент</th><th>Выручка</th><th>Доля</th></tr></thead>
+          <tbody>
+            <tr><td>Other</td><td class='num'>69.02 млн ₽</td><td class='num'>57.1%</td></tr><tr><td>Soglasie</td><td class='num'>34.92 млн ₽</td><td class='num'>28.9%</td></tr><tr><td>VSK</td><td class='num'>11.20 млн ₽</td><td class='num'>9.3%</td></tr><tr><td>Sberbank</td><td class='num'>5.65 млн ₽</td><td class='num'>4.7%</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+      <details>
+        <summary>Источники данных</summary>
+        <ul class="sources">
+          <li>Бактикова Фаина Родьсиловна.xlsx</li><li>Выгрузки (1).xlsx</li><li>Выгрузки (2).xlsx</li><li>Выгрузки (3).xlsx</li><li>Выгрузки.xlsx</li><li>Кочетков Никита Николаевич.xlsx</li><li>Кузнецова Анастасия Витальевна.xlsx</li><li>Сорванов Олег Николаевич.xlsx</li>
+        </ul>
+      </details>
+    </section>
   </main>
-  <footer class="footer">Virtu Systems · демо-страница с агрегированными метриками</footer>
+
+  <footer class="footer">
+    Virtu Systems · Аналитический отчёт по рентабельности · 2026-08-28
+  </footer>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

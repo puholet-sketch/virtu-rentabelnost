@@ -1,0 +1,6326 @@
+{
+  "meta": {
+    "analysis_date": "2026-08-28",
+    "period": "7 месяцев (январь–июль 2026)",
+    "main_file": "Кочетков Никита Николаевич.xlsx",
+    "main_file_rows": 646,
+    "main_file_note": "Consolidated PM KPI — свод по всем PM (646 строк)",
+    "data_sources": [
+      "Бактикова Фаина Родьсиловна.xlsx",
+      "Выгрузки (1).xlsx",
+      "Выгрузки (2).xlsx",
+      "Выгрузки (3).xlsx",
+      "Выгрузки.xlsx",
+      "Кочетков Никита Николаевич.xlsx",
+      "Кузнецова Анастасия Витальевна.xlsx",
+      "Сорванов Олег Николаевич.xlsx"
+    ]
+  },
+  "executive_summary": [
+    "Портфель за 7 мес. (PM KPI, сегменты без двойного счёта): выручка 120.8 млн ₽, опер. прибыль +1.0 млн ₽, маржа 0.8% — ниже типичных 15–25% для зрелых PS/SaaS-проектов.",
+    "Главный драйвер убытка — сегмент «Soglasie Mortgage» (-7.6 млн ₽). Вместе убыточные сегменты Soglasie Mortgage + Vita + Commercial съедают 14.7 млн ₽ прибыли лицензий и VSK.",
+    "Парето: 6 проектов дают 80% выручки; крупнейший убыток среди delivery — «NPF Soglasie» (-0.8 млн ₽).",
+    "Концентрация клиентов: топ-3 = 95.3% выручки (лидер — Other, 57.1%). Риск зависимости от 1–2 страховых групп.",
+    "Разброс эффективности PM: Кузнецова Анастасия (17.4% маржа, 957 ₽/DEV-ч) vs Сорванов Олег (-0.1%) — не только объём, но и unit economics.",
+    "Потенциал улучшения: ~6.1 млн ₽ при выведении 5 проблемных проектов на маржу 15% или оптимизации аллокаций (оценка, не бюджет)."
+  ],
+  "portfolio": {
+    "revenue": 120799879.13,
+    "operating_profit": 983533.8761116145,
+    "margin_pct": 0.81,
+    "dev_hours": 21629.081,
+    "projects_delivery_count": 256,
+    "projects_with_revenue": 255,
+    "methodology": "Сумма 10 top-level сегментов из consolidated PM KPI (646 строк, Кочетков). Без двойного счёта leaf + segment. Период: 7 мес. (янв–июл 2026)."
+  },
+  "waterfall": [
+    {
+      "label": "Выручка",
+      "value": 120799879.13,
+      "type": "revenue"
+    },
+    {
+      "label": "ФОТ разработка",
+      "value": -37065729.87491301,
+      "type": "cost",
+      "running": 83734149.25508699
+    },
+    {
+      "label": "ФОТ PM",
+      "value": -7266968.070399999,
+      "type": "cost",
+      "running": 76467181.18468699
+    },
+    {
+      "label": "ФОТ аккаунт (SM)",
+      "value": -7463672.2226,
+      "type": "cost",
+      "running": 69003508.96208699
+    },
+    {
+      "label": "ФОТ TS",
+      "value": -3617545.0053598126,
+      "type": "cost",
+      "running": 65385963.95672718
+    },
+    {
+      "label": "Infra",
+      "value": -9554465.059075465,
+      "type": "cost",
+      "running": 55831498.89765171
+    },
+    {
+      "label": "Overheads / косвенные",
+      "value": -54847965.02154009,
+      "type": "cost",
+      "running": 983533.8761116192
+    },
+    {
+      "label": "Опер. прибыль",
+      "value": 983533.8761116145,
+      "type": "profit"
+    }
+  ],
+  "segments": [
+    {
+      "segment": "Commercial",
+      "revenue": 63909803.129999995,
+      "profit": -1783192.8978343606,
+      "margin_pct": -2.8,
+      "dev_hours": 11545.331999999999,
+      "value_driver": "shrink"
+    },
+    {
+      "segment": "Soglasie Mortgage",
+      "revenue": 21336546.0,
+      "profit": -7605557.558256194,
+      "margin_pct": -35.6,
+      "dev_hours": 5975.915,
+      "value_driver": "shrink"
+    },
+    {
+      "segment": "VSK Auto",
+      "revenue": 11204850.0,
+      "profit": 2955118.7983543286,
+      "margin_pct": 26.4,
+      "dev_hours": 1116.25,
+      "value_driver": "growth"
+    },
+    {
+      "segment": "Soglasie Vita",
+      "revenue": 9123075.0,
+      "profit": -5309620.011414275,
+      "margin_pct": -58.2,
+      "dev_hours": 2514.834,
+      "value_driver": "shrink"
+    },
+    {
+      "segment": "Sberbank ins. AUTO Licenses",
+      "revenue": 5653125.0,
+      "profit": 5653125.0,
+      "margin_pct": 100.0,
+      "dev_hours": 0,
+      "value_driver": "growth"
+    },
+    {
+      "segment": "Soglasie Bank",
+      "revenue": 4458000.0,
+      "profit": 1959180.545262115,
+      "margin_pct": 43.9,
+      "dev_hours": 476.74999999999994,
+      "value_driver": "growth"
+    },
+    {
+      "segment": "Equipment",
+      "revenue": 3987480.0,
+      "profit": 3987480.0,
+      "margin_pct": 100.0,
+      "dev_hours": 0,
+      "value_driver": "growth"
+    },
+    {
+      "segment": "Transactions",
+      "revenue": 600000.0,
+      "profit": 600000.0,
+      "margin_pct": 100.0,
+      "dev_hours": 0,
+      "value_driver": "neutral"
+    },
+    {
+      "segment": "Licenses",
+      "revenue": 450000.0,
+      "profit": 450000.0,
+      "margin_pct": 100.0,
+      "dev_hours": 0,
+      "value_driver": "neutral"
+    },
+    {
+      "segment": "Professional Development Services",
+      "revenue": 77000.0,
+      "profit": 77000.0,
+      "margin_pct": 100.0,
+      "dev_hours": 0,
+      "value_driver": "neutral"
+    }
+  ],
+  "benchmarks": {
+    "median_margin": 6.8,
+    "median_cc_dev": 5228.0,
+    "median_pct_pm": 14.5,
+    "median_pct_sm": 66.5,
+    "q75_margin": 22.8,
+    "q25_margin": -13.0
+  },
+  "pareto": {
+    "top3_revenue_pct": 51.5,
+    "top3_profit_pct": 187.7,
+    "profit_contributors": [
+      {
+        "project": "VSK DMS (Molev)",
+        "client": "VSK",
+        "revenue": 1839070.0,
+        "profit": 1120048.2606679366,
+        "margin_pct": 60.9,
+        "dev_hours": 9.5,
+        "pm_hours": 0,
+        "sm_hours": 106.56000000000002,
+        "pct_pm": null,
+        "pct_sm": 1121.7,
+        "cc_dev": 6770.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_SM_OVERHEAD"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "Soglasie Migrant",
+        "client": "Soglasie",
+        "revenue": 743002.0,
+        "profit": 378302.07503430976,
+        "margin_pct": 50.9,
+        "dev_hours": 54.5,
+        "pm_hours": 18.63,
+        "sm_hours": 0,
+        "pct_pm": 34.2,
+        "pct_sm": null,
+        "cc_dev": 5228.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_PM_OVERHEAD"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "Solidarnost",
+        "client": "Other",
+        "revenue": 975000.0,
+        "profit": 320326.2840343937,
+        "margin_pct": 32.9,
+        "dev_hours": 22.75,
+        "pm_hours": 0,
+        "sm_hours": 75.91999999999999,
+        "pct_pm": null,
+        "pct_sm": 333.7,
+        "cc_dev": 6339.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_SM_OVERHEAD"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "VSK BANK",
+        "client": "VSK",
+        "revenue": 1394173.4700000002,
+        "profit": 135729.45194546762,
+        "margin_pct": 9.7,
+        "dev_hours": 4.5,
+        "pm_hours": 0,
+        "sm_hours": 67.05000000000001,
+        "pct_pm": null,
+        "pct_sm": 1490.0,
+        "cc_dev": 7125.0,
+        "infra": -615584.7600577022,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_SM_OVERHEAD",
+          "HIGH_CC_DEV",
+          "LOW_MARGIN",
+          "HIGH_INFRA"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "Sberbank ins. AUTO KASKO",
+        "client": "Sberbank",
+        "revenue": 596500.66,
+        "profit": 76008.8860113289,
+        "margin_pct": 12.7,
+        "dev_hours": 65.25,
+        "pm_hours": 8.459999999999999,
+        "sm_hours": 24.599999999999998,
+        "pct_pm": 13.0,
+        "pct_sm": 37.7,
+        "cc_dev": 5554.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_SM_OVERHEAD"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "Sberbank ins. AUTO OSAGO",
+        "client": "Sberbank",
+        "revenue": 882451.0,
+        "profit": 59885.83286798629,
+        "margin_pct": 6.8,
+        "dev_hours": 167.75,
+        "pm_hours": 8.459999999999999,
+        "sm_hours": 0,
+        "pct_pm": 5.0,
+        "pct_sm": null,
+        "cc_dev": 5090.0,
+        "infra": 0.0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "LOW_MARGIN"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "Chulpan",
+        "client": "Other",
+        "revenue": 90000.0,
+        "profit": 2761.2139505109517,
+        "margin_pct": 3.1,
+        "dev_hours": 1.0,
+        "pm_hours": 17.2,
+        "sm_hours": 0,
+        "pct_pm": 1720.0,
+        "pct_sm": null,
+        "cc_dev": 3486.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_PM_OVERHEAD",
+          "LOW_MARGIN"
+        ],
+        "health": "yellow"
+      }
+    ],
+    "loss_makers": [
+      {
+        "project": "NPF Soglasie",
+        "client": "Soglasie",
+        "revenue": 2928710.0,
+        "profit": -755206.3177355654,
+        "margin_pct": -25.8,
+        "dev_hours": 699.4159999999999,
+        "pm_hours": 112.2,
+        "sm_hours": 128.8,
+        "pct_pm": 16.0,
+        "pct_sm": 18.4,
+        "cc_dev": 4618.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_PM_OVERHEAD",
+          "HIGH_SM_OVERHEAD",
+          "NEGATIVE_MARGIN"
+        ],
+        "health": "red"
+      },
+      {
+        "project": "MSG",
+        "client": "Other",
+        "revenue": 1198300.0,
+        "profit": -366208.1346332226,
+        "margin_pct": -30.6,
+        "dev_hours": 363.75,
+        "pm_hours": 21.39,
+        "sm_hours": 0,
+        "pct_pm": 5.9,
+        "pct_sm": null,
+        "cc_dev": 4628.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "NEGATIVE_MARGIN"
+        ],
+        "health": "red"
+      },
+      {
+        "project": "Gelios_Travel",
+        "client": "Gelios",
+        "revenue": 1487000.0,
+        "profit": -2896.258007205557,
+        "margin_pct": -0.2,
+        "dev_hours": 63.167,
+        "pm_hours": 66.67000000000002,
+        "sm_hours": 60.25,
+        "pct_pm": 105.5,
+        "pct_sm": 95.4,
+        "cc_dev": 5232.0,
+        "infra": -569400.719918264,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_PM_OVERHEAD",
+          "HIGH_SM_OVERHEAD",
+          "NEGATIVE_MARGIN",
+          "HIGH_INFRA"
+        ],
+        "health": "red"
+      }
+    ],
+    "pareto_80_revenue_count": 6
+  },
+  "concentration": {
+    "by_client": [
+      {
+        "client": "Other",
+        "revenue": 69024283.13,
+        "share_pct": 57.1
+      },
+      {
+        "client": "Soglasie",
+        "revenue": 34917621.0,
+        "share_pct": 28.9
+      },
+      {
+        "client": "VSK",
+        "revenue": 11204850.0,
+        "share_pct": 9.3
+      },
+      {
+        "client": "Sberbank",
+        "revenue": 5653125.0,
+        "share_pct": 4.7
+      }
+    ],
+    "top3_share_pct": 95.3,
+    "top1_client": "Other",
+    "top1_share_pct": 57.1
+  },
+  "top_profitable": [
+    {
+      "project": "VSK DMS (Molev)",
+      "client": "VSK",
+      "revenue": 1839070.0,
+      "profit": 1120048.2606679366,
+      "margin_pct": 60.9,
+      "dev_hours": 9.5,
+      "pm_hours": 0,
+      "sm_hours": 106.56000000000002,
+      "pct_pm": null,
+      "pct_sm": 1121.7,
+      "cc_dev": 6770.0,
+      "infra": 0,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_SM_OVERHEAD"
+      ],
+      "health": "green"
+    },
+    {
+      "project": "Soglasie Migrant",
+      "client": "Soglasie",
+      "revenue": 743002.0,
+      "profit": 378302.07503430976,
+      "margin_pct": 50.9,
+      "dev_hours": 54.5,
+      "pm_hours": 18.63,
+      "sm_hours": 0,
+      "pct_pm": 34.2,
+      "pct_sm": null,
+      "cc_dev": 5228.0,
+      "infra": 0,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_PM_OVERHEAD"
+      ],
+      "health": "green"
+    },
+    {
+      "project": "Solidarnost",
+      "client": "Other",
+      "revenue": 975000.0,
+      "profit": 320326.2840343937,
+      "margin_pct": 32.9,
+      "dev_hours": 22.75,
+      "pm_hours": 0,
+      "sm_hours": 75.91999999999999,
+      "pct_pm": null,
+      "pct_sm": 333.7,
+      "cc_dev": 6339.0,
+      "infra": 0,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_SM_OVERHEAD"
+      ],
+      "health": "green"
+    },
+    {
+      "project": "VSK BANK",
+      "client": "VSK",
+      "revenue": 1394173.4700000002,
+      "profit": 135729.45194546762,
+      "margin_pct": 9.7,
+      "dev_hours": 4.5,
+      "pm_hours": 0,
+      "sm_hours": 67.05000000000001,
+      "pct_pm": null,
+      "pct_sm": 1490.0,
+      "cc_dev": 7125.0,
+      "infra": -615584.7600577022,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_SM_OVERHEAD",
+        "HIGH_CC_DEV",
+        "LOW_MARGIN",
+        "HIGH_INFRA"
+      ],
+      "health": "yellow"
+    },
+    {
+      "project": "Sberbank ins. AUTO KASKO",
+      "client": "Sberbank",
+      "revenue": 596500.66,
+      "profit": 76008.8860113289,
+      "margin_pct": 12.7,
+      "dev_hours": 65.25,
+      "pm_hours": 8.459999999999999,
+      "sm_hours": 24.599999999999998,
+      "pct_pm": 13.0,
+      "pct_sm": 37.7,
+      "cc_dev": 5554.0,
+      "infra": 0,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_SM_OVERHEAD"
+      ],
+      "health": "green"
+    },
+    {
+      "project": "Sberbank ins. AUTO OSAGO",
+      "client": "Sberbank",
+      "revenue": 882451.0,
+      "profit": 59885.83286798629,
+      "margin_pct": 6.8,
+      "dev_hours": 167.75,
+      "pm_hours": 8.459999999999999,
+      "sm_hours": 0,
+      "pct_pm": 5.0,
+      "pct_sm": null,
+      "cc_dev": 5090.0,
+      "infra": 0.0,
+      "direct_expenses": 0,
+      "root_causes": [
+        "LOW_MARGIN"
+      ],
+      "health": "yellow"
+    },
+    {
+      "project": "Chulpan",
+      "client": "Other",
+      "revenue": 90000.0,
+      "profit": 2761.2139505109517,
+      "margin_pct": 3.1,
+      "dev_hours": 1.0,
+      "pm_hours": 17.2,
+      "sm_hours": 0,
+      "pct_pm": 1720.0,
+      "pct_sm": null,
+      "cc_dev": 3486.0,
+      "infra": 0,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_PM_OVERHEAD",
+        "LOW_MARGIN"
+      ],
+      "health": "yellow"
+    }
+  ],
+  "loss_making": [
+    {
+      "project": "NPF Soglasie",
+      "client": "Soglasie",
+      "revenue": 2928710.0,
+      "profit": -755206.3177355654,
+      "margin_pct": -25.8,
+      "dev_hours": 699.4159999999999,
+      "pm_hours": 112.2,
+      "sm_hours": 128.8,
+      "pct_pm": 16.0,
+      "pct_sm": 18.4,
+      "cc_dev": 4618.0,
+      "infra": 0,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_PM_OVERHEAD",
+        "HIGH_SM_OVERHEAD",
+        "NEGATIVE_MARGIN"
+      ],
+      "health": "red"
+    },
+    {
+      "project": "MSG",
+      "client": "Other",
+      "revenue": 1198300.0,
+      "profit": -366208.1346332226,
+      "margin_pct": -30.6,
+      "dev_hours": 363.75,
+      "pm_hours": 21.39,
+      "sm_hours": 0,
+      "pct_pm": 5.9,
+      "pct_sm": null,
+      "cc_dev": 4628.0,
+      "infra": 0,
+      "direct_expenses": 0,
+      "root_causes": [
+        "NEGATIVE_MARGIN"
+      ],
+      "health": "red"
+    },
+    {
+      "project": "Gelios_Travel",
+      "client": "Gelios",
+      "revenue": 1487000.0,
+      "profit": -2896.258007205557,
+      "margin_pct": -0.2,
+      "dev_hours": 63.167,
+      "pm_hours": 66.67000000000002,
+      "sm_hours": 60.25,
+      "pct_pm": 105.5,
+      "pct_sm": 95.4,
+      "cc_dev": 5232.0,
+      "infra": -569400.719918264,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_PM_OVERHEAD",
+        "HIGH_SM_OVERHEAD",
+        "NEGATIVE_MARGIN",
+        "HIGH_INFRA"
+      ],
+      "health": "red"
+    }
+  ],
+  "flagged_projects": [
+    {
+      "project": "Chulpan",
+      "client": "Other",
+      "revenue": 90000.0,
+      "profit": 2761.2139505109517,
+      "margin_pct": 3.1,
+      "dev_hours": 1.0,
+      "pm_hours": 17.2,
+      "sm_hours": 0,
+      "pct_pm": 1720.0,
+      "pct_sm": null,
+      "cc_dev": 3486.0,
+      "infra": 0,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_PM_OVERHEAD",
+        "LOW_MARGIN"
+      ],
+      "health": "yellow"
+    },
+    {
+      "project": "Gelios_Travel",
+      "client": "Gelios",
+      "revenue": 1487000.0,
+      "profit": -2896.258007205557,
+      "margin_pct": -0.2,
+      "dev_hours": 63.167,
+      "pm_hours": 66.67000000000002,
+      "sm_hours": 60.25,
+      "pct_pm": 105.5,
+      "pct_sm": 95.4,
+      "cc_dev": 5232.0,
+      "infra": -569400.719918264,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_PM_OVERHEAD",
+        "HIGH_SM_OVERHEAD",
+        "NEGATIVE_MARGIN",
+        "HIGH_INFRA"
+      ],
+      "health": "red"
+    },
+    {
+      "project": "MSG",
+      "client": "Other",
+      "revenue": 1198300.0,
+      "profit": -366208.1346332226,
+      "margin_pct": -30.6,
+      "dev_hours": 363.75,
+      "pm_hours": 21.39,
+      "sm_hours": 0,
+      "pct_pm": 5.9,
+      "pct_sm": null,
+      "cc_dev": 4628.0,
+      "infra": 0,
+      "direct_expenses": 0,
+      "root_causes": [
+        "NEGATIVE_MARGIN"
+      ],
+      "health": "red"
+    },
+    {
+      "project": "NPF Soglasie",
+      "client": "Soglasie",
+      "revenue": 2928710.0,
+      "profit": -755206.3177355654,
+      "margin_pct": -25.8,
+      "dev_hours": 699.4159999999999,
+      "pm_hours": 112.2,
+      "sm_hours": 128.8,
+      "pct_pm": 16.0,
+      "pct_sm": 18.4,
+      "cc_dev": 4618.0,
+      "infra": 0,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_PM_OVERHEAD",
+        "HIGH_SM_OVERHEAD",
+        "NEGATIVE_MARGIN"
+      ],
+      "health": "red"
+    },
+    {
+      "project": "Sberbank ins. AUTO KASKO",
+      "client": "Sberbank",
+      "revenue": 596500.66,
+      "profit": 76008.8860113289,
+      "margin_pct": 12.7,
+      "dev_hours": 65.25,
+      "pm_hours": 8.459999999999999,
+      "sm_hours": 24.599999999999998,
+      "pct_pm": 13.0,
+      "pct_sm": 37.7,
+      "cc_dev": 5554.0,
+      "infra": 0,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_SM_OVERHEAD"
+      ],
+      "health": "green"
+    },
+    {
+      "project": "Soglasie Migrant",
+      "client": "Soglasie",
+      "revenue": 743002.0,
+      "profit": 378302.07503430976,
+      "margin_pct": 50.9,
+      "dev_hours": 54.5,
+      "pm_hours": 18.63,
+      "sm_hours": 0,
+      "pct_pm": 34.2,
+      "pct_sm": null,
+      "cc_dev": 5228.0,
+      "infra": 0,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_PM_OVERHEAD"
+      ],
+      "health": "green"
+    },
+    {
+      "project": "Solidarnost",
+      "client": "Other",
+      "revenue": 975000.0,
+      "profit": 320326.2840343937,
+      "margin_pct": 32.9,
+      "dev_hours": 22.75,
+      "pm_hours": 0,
+      "sm_hours": 75.91999999999999,
+      "pct_pm": null,
+      "pct_sm": 333.7,
+      "cc_dev": 6339.0,
+      "infra": 0,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_SM_OVERHEAD"
+      ],
+      "health": "green"
+    },
+    {
+      "project": "VSK BANK",
+      "client": "VSK",
+      "revenue": 1394173.4700000002,
+      "profit": 135729.45194546762,
+      "margin_pct": 9.7,
+      "dev_hours": 4.5,
+      "pm_hours": 0,
+      "sm_hours": 67.05000000000001,
+      "pct_pm": null,
+      "pct_sm": 1490.0,
+      "cc_dev": 7125.0,
+      "infra": -615584.7600577022,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_SM_OVERHEAD",
+        "HIGH_CC_DEV",
+        "LOW_MARGIN",
+        "HIGH_INFRA"
+      ],
+      "health": "yellow"
+    },
+    {
+      "project": "VSK DMS (Molev)",
+      "client": "VSK",
+      "revenue": 1839070.0,
+      "profit": 1120048.2606679366,
+      "margin_pct": 60.9,
+      "dev_hours": 9.5,
+      "pm_hours": 0,
+      "sm_hours": 106.56000000000002,
+      "pct_pm": null,
+      "pct_sm": 1121.7,
+      "cc_dev": 6770.0,
+      "infra": 0,
+      "direct_expenses": 0,
+      "root_causes": [
+        "HIGH_SM_OVERHEAD"
+      ],
+      "health": "green"
+    }
+  ],
+  "pm_matrix": [
+    {
+      "pm_name": "Бактикова Фаина Родьсиловна",
+      "pm_short": "Бактикова Фаина",
+      "projects_count": 3,
+      "revenue": 5364625.0,
+      "operating_profit": 492190.837901843,
+      "margin_pct": 9.2,
+      "dev_hours": 992.75,
+      "avg_pct_pm": 0.0,
+      "avg_pct_sm": 17.2,
+      "avg_cc_dev": 4781.0,
+      "loss_projects": 2,
+      "negative_profit": -122868.40556577896,
+      "profit_per_dev_hour": 496.0,
+      "revenue_per_dev_hour": 5404.0
+    },
+    {
+      "pm_name": "Кузнецова Анастасия Витальевна",
+      "pm_short": "Кузнецова Анастасия",
+      "projects_count": 6,
+      "revenue": 43140207.74,
+      "operating_profit": 7495472.98976849,
+      "margin_pct": 17.4,
+      "dev_hours": 7830.088,
+      "avg_pct_pm": 13.2,
+      "avg_pct_sm": 5.4,
+      "avg_cc_dev": 4848.0,
+      "loss_projects": 3,
+      "negative_profit": -2258347.9490562687,
+      "profit_per_dev_hour": 957.0,
+      "revenue_per_dev_hour": 5510.0
+    },
+    {
+      "pm_name": "Сорванов Олег Николаевич",
+      "pm_short": "Сорванов Олег",
+      "projects_count": 8,
+      "revenue": 119562527.57,
+      "operating_profit": -171486.19387118868,
+      "margin_pct": -0.1,
+      "dev_hours": 24619.086000000003,
+      "avg_pct_pm": 0.7,
+      "avg_pct_sm": 3.2,
+      "avg_cc_dev": 5303.0,
+      "loss_projects": 3,
+      "negative_profit": -4795450.129307538,
+      "profit_per_dev_hour": -7.0,
+      "revenue_per_dev_hour": 4856.0
+    }
+  ],
+  "risk_signals": [
+    {
+      "project": "Gelios_Travel",
+      "signal": "Отрицательная маржа",
+      "severity": "critical",
+      "profit": -2896.258007205557,
+      "revenue": 1487000.0
+    },
+    {
+      "project": "MSG",
+      "signal": "Отрицательная маржа",
+      "severity": "critical",
+      "profit": -366208.1346332226,
+      "revenue": 1198300.0
+    },
+    {
+      "project": "NPF Soglasie",
+      "signal": "Отрицательная маржа",
+      "severity": "critical",
+      "profit": -755206.3177355654,
+      "revenue": 2928710.0
+    },
+    {
+      "project": "Chulpan",
+      "signal": "PM >15.0% DEV",
+      "severity": "high",
+      "profit": 2761.2139505109517,
+      "revenue": 90000.0
+    },
+    {
+      "project": "Gelios_Travel",
+      "signal": "PM >15.0% DEV",
+      "severity": "high",
+      "profit": -2896.258007205557,
+      "revenue": 1487000.0
+    },
+    {
+      "project": "Gelios_Travel",
+      "signal": "SM >10.0% DEV",
+      "severity": "high",
+      "profit": -2896.258007205557,
+      "revenue": 1487000.0
+    },
+    {
+      "project": "NPF Soglasie",
+      "signal": "PM >15.0% DEV",
+      "severity": "high",
+      "profit": -755206.3177355654,
+      "revenue": 2928710.0
+    },
+    {
+      "project": "NPF Soglasie",
+      "signal": "SM >10.0% DEV",
+      "severity": "high",
+      "profit": -755206.3177355654,
+      "revenue": 2928710.0
+    },
+    {
+      "project": "Sberbank ins. AUTO KASKO",
+      "signal": "SM >10.0% DEV",
+      "severity": "high",
+      "profit": 76008.8860113289,
+      "revenue": 596500.66
+    },
+    {
+      "project": "Soglasie Migrant",
+      "signal": "PM >15.0% DEV",
+      "severity": "high",
+      "profit": 378302.07503430976,
+      "revenue": 743002.0
+    },
+    {
+      "project": "Solidarnost",
+      "signal": "SM >10.0% DEV",
+      "severity": "high",
+      "profit": 320326.2840343937,
+      "revenue": 975000.0
+    },
+    {
+      "project": "VSK BANK",
+      "signal": "SM >10.0% DEV",
+      "severity": "high",
+      "profit": 135729.45194546762,
+      "revenue": 1394173.4700000002
+    },
+    {
+      "project": "VSK DMS (Molev)",
+      "signal": "SM >10.0% DEV",
+      "severity": "high",
+      "profit": 1120048.2606679366,
+      "revenue": 1839070.0
+    },
+    {
+      "project": "Other",
+      "signal": "Концентрация: топ-3 клиента = 95.3% выручки",
+      "severity": "high",
+      "profit": null,
+      "revenue": null
+    },
+    {
+      "project": "VSK BANK",
+      "signal": "C/C DEV выше Q3",
+      "severity": "medium",
+      "profit": 135729.45194546762,
+      "revenue": 1394173.4700000002
+    }
+  ],
+  "recommendations": [
+    {
+      "action": "Финкомитет по сегменту «Soglasie Mortgage»: ставки, outstaff, Infra, scope freeze",
+      "estimated_impact_rub": 2281667.267476858,
+      "priority": "critical",
+      "area": "segment"
+    },
+    {
+      "action": "Финкомитет по сегменту «Soglasie Vita»: ставки, outstaff, Infra, scope freeze",
+      "estimated_impact_rub": 1592886.0034242824,
+      "priority": "critical",
+      "area": "segment"
+    },
+    {
+      "action": "Вывести на маржу 15.0%: HIGH_PM_OVERHEAD, HIGH_SM_OVERHEAD, NEGATIVE_MARGIN",
+      "estimated_impact_rub": 1194513.0,
+      "priority": "medium",
+      "area": "project",
+      "project": "NPF Soglasie"
+    },
+    {
+      "action": "Вывести на маржу 15.0%: NEGATIVE_MARGIN",
+      "estimated_impact_rub": 545953.0,
+      "priority": "medium",
+      "area": "project",
+      "project": "MSG"
+    },
+    {
+      "action": "Финкомитет по сегменту «Commercial»: ставки, outstaff, Infra, scope freeze",
+      "estimated_impact_rub": 534957.8693503082,
+      "priority": "critical",
+      "area": "segment"
+    },
+    {
+      "action": "Вывести на маржу 15.0%: HIGH_PM_OVERHEAD, HIGH_SM_OVERHEAD, NEGATIVE_MARGIN, HIGH_INFRA",
+      "estimated_impact_rub": 225946.0,
+      "priority": "medium",
+      "area": "project",
+      "project": "Gelios_Travel"
+    },
+    {
+      "action": "Снизить PM-оверхед на «NPF Soglasie» (PM 16.0%)",
+      "estimated_impact_rub": 113280.9476603348,
+      "priority": "medium",
+      "area": "overhead"
+    },
+    {
+      "action": "Снизить PM-оверхед на «Chulpan» (PM 1720.0%)",
+      "estimated_impact_rub": 1800.0,
+      "priority": "medium",
+      "area": "overhead"
+    },
+    {
+      "action": "Снизить PM-оверхед на «Gelios_Travel» (PM 105.5%)",
+      "estimated_impact_rub": 434.43870108083354,
+      "priority": "medium",
+      "area": "overhead"
+    }
+  ],
+  "monthly_trend": [],
+  "pm_kpi_diff": {
+    "profit_diff_total": -4174653.8469884843,
+    "note": "PM = полный год по проекту; PM KPI = с месяца старта (7 мес.)"
+  },
+  "jira": {
+    "file": "Выгрузки.xlsx",
+    "rows": 50140,
+    "total_hours_logged": 86364.29412,
+    "unique_projects": 54,
+    "period": "2026-01-01 — 2026-12-31",
+    "top_hours_projects": [
+      {
+        "project": "Rosgosstrakh OFR NEW",
+        "hours": 13111.0
+      },
+      {
+        "project": "Rosgosstrakh Support",
+        "hours": 7844.4
+      },
+      {
+        "project": "Soglasie Mortgage",
+        "hours": 7149.8
+      },
+      {
+        "project": "JX R&D",
+        "hours": 7049.2
+      },
+      {
+        "project": "Support unallocated",
+        "hours": 5766.2
+      },
+      {
+        "project": "Rosgosstrakh Mortgage",
+        "hours": 5615.4
+      },
+      {
+        "project": "AI",
+        "hours": 5054.5
+      },
+      {
+        "project": "Rosgosstrakh Development",
+        "hours": 4991.6
+      }
+    ]
+  },
+  "methodology": {
+    "portfolio_scope": "Top-level сегменты (Commercial, Soglasie*, VSK, Licenses…)",
+    "project_scope": "Leaf-проекты с DEV-часами или выручкой; исключены ФИО аллокаций и Gross Salaries",
+    "pm_benchmarks": "PM>15.0% DEV, SM>10.0% DEV — red flag",
+    "limitations": [
+      "Кочетков 646 строк = consolidated; PM-файлы (Кузнецова, Сорванов, Бактикова) частично пересекаются",
+      "Строки с ФИО — аллокация ФОТ, не проекты; исключены из топов, но влияют на PM-листы",
+      "Лицензии/счета (100% маржа, 0 DEV) — отдельный класс, не смешиваются с delivery margin",
+      "Месячный тренд — только по invoice-строкам Maintenance/лицензии, не полный P&L по месяцам"
+    ]
+  },
+  "appendix": {
+    "all_delivery_projects": [
+      {
+        "project": "84-2sglm  от 28.5.2026",
+        "client": "Soglasie",
+        "revenue": 3678780.0,
+        "profit": 3678780.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "184рб/14/0  от 24.6.2026",
+        "client": "Other",
+        "revenue": 2984520.0,
+        "profit": 2984520.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "81-2sglm  от 31.3.2026",
+        "client": "Soglasie",
+        "revenue": 2515995.0,
+        "profit": 2515995.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 30.4.2026",
+        "client": "Other",
+        "revenue": 2324125.0,
+        "profit": 2324125.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.5.2026",
+        "client": "Other",
+        "revenue": 1835903.0,
+        "profit": 1835903.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "89-2sglm  от 30.6.2026",
+        "client": "Soglasie",
+        "revenue": 1831410.0,
+        "profit": 1831410.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "82-2sglm  от 30.4.2026",
+        "client": "Soglasie",
+        "revenue": 1707480.0,
+        "profit": 1707480.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.5.2026",
+        "client": "Other",
+        "revenue": 1612538.0,
+        "profit": 1612538.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "380ли-01/1  от 30.6.2026",
+        "client": "Other",
+        "revenue": 1278180.0,
+        "profit": 1278180.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "384ли-01/1  от 31.7.2026",
+        "client": "Other",
+        "revenue": 1255040.0,
+        "profit": 1255040.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "376ли-01/1  от 31.5.2026",
+        "client": "Other",
+        "revenue": 1235120.0,
+        "profit": 1235120.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "372ли-01/1  от 30.4.2026",
+        "client": "Other",
+        "revenue": 1212660.0,
+        "profit": 1212660.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "9рб-спф  от 31.5.2026",
+        "client": "Other",
+        "revenue": 1156220.0,
+        "profit": 1156220.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 28.2.2026",
+        "client": "Other",
+        "revenue": 1130625.0,
+        "profit": 1130625.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 30.4.2026",
+        "client": "Other",
+        "revenue": 1130625.0,
+        "profit": 1130625.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.1.2026",
+        "client": "Other",
+        "revenue": 1130625.0,
+        "profit": 1130625.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.3.2026",
+        "client": "Other",
+        "revenue": 1130625.0,
+        "profit": 1130625.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.5.2026",
+        "client": "Other",
+        "revenue": 1130625.0,
+        "profit": 1130625.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "VSK DMS (Molev)",
+        "client": "VSK",
+        "revenue": 1839070.0,
+        "profit": 1120048.2606679366,
+        "margin_pct": 60.9,
+        "dev_hours": 9.5,
+        "pm_hours": 0,
+        "sm_hours": 106.56000000000002,
+        "pct_pm": null,
+        "pct_sm": 1121.7,
+        "cc_dev": 6770.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_SM_OVERHEAD"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "101-12/08/  от 31.5.2026",
+        "client": "Other",
+        "revenue": 1097600.0,
+        "profit": 1097600.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "368ли-01/1  от 31.3.2026",
+        "client": "Other",
+        "revenue": 1055420.0,
+        "profit": 1055420.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "181рб/14/0  от 31.3.2026",
+        "client": "Other",
+        "revenue": 959310.0,
+        "profit": 959310.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "69/14/02/1  от 22.4.2026",
+        "client": "Other",
+        "revenue": 829600.0,
+        "profit": 829600.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.3.2026",
+        "client": "Other",
+        "revenue": 829600.0,
+        "profit": 829600.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "60ли-sglm  от 28.2.2026",
+        "client": "Soglasie",
+        "revenue": 810000.0,
+        "profit": 810000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "61ли-sglm  от 31.3.2026",
+        "client": "Soglasie",
+        "revenue": 810000.0,
+        "profit": 810000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "62ли-sglm  от 30.4.2026",
+        "client": "Soglasie",
+        "revenue": 810000.0,
+        "profit": 810000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "63ли-sglm  от 31.5.2026",
+        "client": "Soglasie",
+        "revenue": 810000.0,
+        "profit": 810000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "83-2sglm  от 30.4.2026",
+        "client": "Soglasie",
+        "revenue": 809970.0,
+        "profit": 809970.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "64ли-sglm  от 30.6.2026",
+        "client": "Soglasie",
+        "revenue": 756000.0,
+        "profit": 756000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "65ли-sglm  от 31.7.2026",
+        "client": "Soglasie",
+        "revenue": 756000.0,
+        "profit": 756000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "364ли-01/1  от 28.2.2026",
+        "client": "Other",
+        "revenue": 734400.0,
+        "profit": 734400.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "185рб/14/0  от 25.6.2026",
+        "client": "Other",
+        "revenue": 729810.0,
+        "profit": 729810.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "84тп  от 23.3.2026",
+        "client": "Other",
+        "revenue": 664580.0,
+        "profit": 664580.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "85тп  от 31.3.2026",
+        "client": "Other",
+        "revenue": 664580.0,
+        "profit": 664580.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "86тп  от 30.4.2026",
+        "client": "Other",
+        "revenue": 664580.0,
+        "profit": 664580.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "87тп  от 30.6.2026",
+        "client": "Other",
+        "revenue": 664580.0,
+        "profit": 664580.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "88тп  от 31.7.2026",
+        "client": "Other",
+        "revenue": 664580.0,
+        "profit": 664580.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "89тп  от 31.7.2026",
+        "client": "Other",
+        "revenue": 664580.0,
+        "profit": 664580.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 28.2.2026",
+        "client": "Other",
+        "revenue": 664580.0,
+        "profit": 664580.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.5.2026",
+        "client": "Other",
+        "revenue": 664580.0,
+        "profit": 664580.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "87-12/08/2  от 10.2.2026",
+        "client": "Other",
+        "revenue": 619700.0,
+        "profit": 619700.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.5.2026",
+        "client": "Other",
+        "revenue": 573750.0,
+        "profit": 573750.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "360ли-01/1  от 31.1.2026",
+        "client": "Other",
+        "revenue": 571930.0,
+        "profit": 571930.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "85  от 31.7.2026",
+        "client": "Other",
+        "revenue": 504900.0,
+        "profit": 504900.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "86-12/08/2  от 10.2.2026",
+        "client": "Other",
+        "revenue": 492800.0,
+        "profit": 492800.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 30.4.2026",
+        "client": "Other",
+        "revenue": 490301.0,
+        "profit": 490301.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "68/14/02/1  от 28.2.2026",
+        "client": "Other",
+        "revenue": 489940.0,
+        "profit": 489940.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "90-2sglm  от 30.6.2026",
+        "client": "Soglasie",
+        "revenue": 459000.0,
+        "profit": 459000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "83  от 30.6.2026",
+        "client": "Other",
+        "revenue": 436050.0,
+        "profit": 436050.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "72/14/02/1  от 30.6.2026",
+        "client": "Other",
+        "revenue": 425680.0,
+        "profit": 425680.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "93-2sglm  от 31.7.2026",
+        "client": "Soglasie",
+        "revenue": 397035.0,
+        "profit": 397035.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "188рб/14/0  от 31.7.2026",
+        "client": "Other",
+        "revenue": 394740.0,
+        "profit": 394740.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "78  от 31.3.2026",
+        "client": "Other",
+        "revenue": 392280.0,
+        "profit": 392280.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.7.2026",
+        "client": "Other",
+        "revenue": 390150.0,
+        "profit": 390150.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "Soglasie Migrant",
+        "client": "Soglasie",
+        "revenue": 743002.0,
+        "profit": 378302.07503430976,
+        "margin_pct": 50.9,
+        "dev_hours": 54.5,
+        "pm_hours": 18.63,
+        "sm_hours": 0,
+        "pct_pm": 34.2,
+        "pct_sm": null,
+        "cc_dev": 5228.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_PM_OVERHEAD"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "71/14/02/1  от 25.6.2026",
+        "client": "Other",
+        "revenue": 375825.0,
+        "profit": 375825.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "72/14/02/1  от 30.6.2026",
+        "client": "Other",
+        "revenue": 375825.0,
+        "profit": 375825.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "73/14/02/1  от 31.7.2026",
+        "client": "Other",
+        "revenue": 375825.0,
+        "profit": 375825.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "85-2sglm  от 22.6.2026",
+        "client": "Soglasie",
+        "revenue": 371790.0,
+        "profit": 371790.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "88-2sglm  от 30.6.2026",
+        "client": "Soglasie",
+        "revenue": 369075.0,
+        "profit": 369075.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "68/14/02/1  от 28.2.2026",
+        "client": "Other",
+        "revenue": 367625.0,
+        "profit": 367625.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "69/14/02/1  от 22.4.2026",
+        "client": "Other",
+        "revenue": 367625.0,
+        "profit": 367625.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "70/14/02/1  от 30.4.2026",
+        "client": "Other",
+        "revenue": 367625.0,
+        "profit": 367625.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.3.2026",
+        "client": "Other",
+        "revenue": 367625.0,
+        "profit": 367625.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.5.2026",
+        "client": "Other",
+        "revenue": 367625.0,
+        "profit": 367625.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "70/14/02/1  от 30.4.2026",
+        "client": "Other",
+        "revenue": 361420.0,
+        "profit": 361420.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "71/14/02/1  от 25.6.2026",
+        "client": "Other",
+        "revenue": 324700.0,
+        "profit": 324700.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "73/14/02/1  от 31.7.2026",
+        "client": "Other",
+        "revenue": 324700.0,
+        "profit": 324700.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.5.2026",
+        "client": "Other",
+        "revenue": 324700.0,
+        "profit": 324700.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "Solidarnost",
+        "client": "Other",
+        "revenue": 975000.0,
+        "profit": 320326.2840343937,
+        "margin_pct": 32.9,
+        "dev_hours": 22.75,
+        "pm_hours": 0,
+        "sm_hours": 75.91999999999999,
+        "pct_pm": null,
+        "pct_sm": 333.7,
+        "cc_dev": 6339.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_SM_OVERHEAD"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "86-2sglm  от 5.6.2026",
+        "client": "Soglasie",
+        "revenue": 307230.0,
+        "profit": 307230.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 30.4.2026",
+        "client": "Other",
+        "revenue": 295000.0,
+        "profit": 295000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "22-мсг  от 29.6.2026",
+        "client": "Other",
+        "revenue": 276500.0,
+        "profit": 276500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000019  от 31.1.2026",
+        "client": "Other",
+        "revenue": 270927.09,
+        "profit": 270927.09,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "186рб/14/02  от 30.6.2026",
+        "client": "Other",
+        "revenue": 268515.0,
+        "profit": 268515.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "180рб/14/0  от 28.2.2026",
+        "client": "Other",
+        "revenue": 262980.0,
+        "profit": 262980.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "187рб/14/0  от 30.6.2026",
+        "client": "Other",
+        "revenue": 252450.0,
+        "profit": 252450.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "10тп-спф  от 31.3.2026",
+        "client": "Other",
+        "revenue": 250155.0,
+        "profit": 250155.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "17-мсг  от 8.4.2026",
+        "client": "Other",
+        "revenue": 245000.0,
+        "profit": 245000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.3.2026",
+        "client": "Other",
+        "revenue": 245000.0,
+        "profit": 245000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "95-12/08/2  от 27.3.2026",
+        "client": "Other",
+        "revenue": 243600.0,
+        "profit": 243600.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "385ли-01/1  от 31.7.2026",
+        "client": "Other",
+        "revenue": 224380.0,
+        "profit": 224380.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "84тп  от 23.3.2026",
+        "client": "Other",
+        "revenue": 219450.0,
+        "profit": 219450.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "85тп  от 31.3.2026",
+        "client": "Other",
+        "revenue": 219450.0,
+        "profit": 219450.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "86тп  от 30.4.2026",
+        "client": "Other",
+        "revenue": 219450.0,
+        "profit": 219450.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "87тп  от 30.6.2026",
+        "client": "Other",
+        "revenue": 219450.0,
+        "profit": 219450.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "88тп  от 31.7.2026",
+        "client": "Other",
+        "revenue": 219450.0,
+        "profit": 219450.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "89тп  от 31.7.2026",
+        "client": "Other",
+        "revenue": 219450.0,
+        "profit": 219450.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 28.2.2026",
+        "client": "Other",
+        "revenue": 219450.0,
+        "profit": 219450.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.5.2026",
+        "client": "Other",
+        "revenue": 219450.0,
+        "profit": 219450.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "381ли-01/1  от 30.6.2026",
+        "client": "Other",
+        "revenue": 212590.0,
+        "profit": 212590.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "377ли-01/1  от 31.5.2026",
+        "client": "Other",
+        "revenue": 211960.0,
+        "profit": 211960.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "369ли-01/1  от 31.3.2026",
+        "client": "Other",
+        "revenue": 211300.0,
+        "profit": 211300.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "92-12/08/2  от 11.3.2026",
+        "client": "Other",
+        "revenue": 210000.0,
+        "profit": 210000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.3.2026",
+        "client": "Other",
+        "revenue": 209192.0,
+        "profit": 209192.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "82  от 30.6.2026",
+        "client": "Other",
+        "revenue": 207480.0,
+        "profit": 207480.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "373ли-01/1  от 30.4.2026",
+        "client": "Other",
+        "revenue": 207010.0,
+        "profit": 207010.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "365ли-01/1  от 28.2.2026",
+        "client": "Other",
+        "revenue": 190990.0,
+        "profit": 190990.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 30.4.2026",
+        "client": "Other",
+        "revenue": 184192.0,
+        "profit": 184192.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "361ли-01/1  от 31.1.2026",
+        "client": "Other",
+        "revenue": 181840.0,
+        "profit": 181840.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "103-12/08/  от 31.5.2026",
+        "client": "Other",
+        "revenue": 178500.0,
+        "profit": 178500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "77  от 31.3.2026",
+        "client": "Other",
+        "revenue": 177990.0,
+        "profit": 177990.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "84ли  от 28.2.2026",
+        "client": "Other",
+        "revenue": 172500.0,
+        "profit": 172500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "85ли  от 31.3.2026",
+        "client": "Other",
+        "revenue": 172500.0,
+        "profit": 172500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "86ли  от 30.4.2026",
+        "client": "Other",
+        "revenue": 172500.0,
+        "profit": 172500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "87ли  от 31.5.2026",
+        "client": "Other",
+        "revenue": 172500.0,
+        "profit": 172500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "88ли  от 30.6.2026",
+        "client": "Other",
+        "revenue": 172500.0,
+        "profit": 172500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "89ли  от 31.7.2026",
+        "client": "Other",
+        "revenue": 172500.0,
+        "profit": 172500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "79  от 31.3.2026",
+        "client": "Other",
+        "revenue": 169575.0,
+        "profit": 169575.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 30.4.2026",
+        "client": "Other",
+        "revenue": 168086.75,
+        "profit": 168086.75,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "9тп-спф  от 28.2.2026",
+        "client": "Other",
+        "revenue": 158355.0,
+        "profit": 158355.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000033  от 28.2.2026",
+        "client": "Other",
+        "revenue": 158188.0,
+        "profit": 158188.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000047  от 31.3.2026",
+        "client": "Other",
+        "revenue": 158188.0,
+        "profit": 158188.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000061  от 30.4.2026",
+        "client": "Other",
+        "revenue": 158188.0,
+        "profit": 158188.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000076  от 31.5.2026",
+        "client": "Other",
+        "revenue": 158188.0,
+        "profit": 158188.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000088  от 30.6.2026",
+        "client": "Other",
+        "revenue": 158188.0,
+        "profit": 158188.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000101  от 31.7.2026",
+        "client": "Other",
+        "revenue": 158188.0,
+        "profit": 158188.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000189  от 31.1.2026",
+        "client": "Other",
+        "revenue": 158188.0,
+        "profit": 158188.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.1.2026",
+        "client": "Other",
+        "revenue": 155991.0,
+        "profit": 155991.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 28.2.2026",
+        "client": "Other",
+        "revenue": 150279.0,
+        "profit": 150279.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 28.2.2026",
+        "client": "Other",
+        "revenue": 148428.0,
+        "profit": 148428.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "104-12/08/  от 24.7.2026",
+        "client": "Other",
+        "revenue": 143500.0,
+        "profit": 143500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "81  от 22.6.2026",
+        "client": "Other",
+        "revenue": 137700.0,
+        "profit": 137700.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "VSK BANK",
+        "client": "VSK",
+        "revenue": 1394173.4700000002,
+        "profit": 135729.45194546762,
+        "margin_pct": 9.7,
+        "dev_hours": 4.5,
+        "pm_hours": 0,
+        "sm_hours": 67.05000000000001,
+        "pct_pm": null,
+        "pct_sm": 1490.0,
+        "cc_dev": 7125.0,
+        "infra": -615584.7600577022,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_SM_OVERHEAD",
+          "HIGH_CC_DEV",
+          "LOW_MARGIN",
+          "HIGH_INFRA"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "47тп-глс  от 28.2.2026",
+        "client": "Other",
+        "revenue": 135000.0,
+        "profit": 135000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "48тп-глс  от 31.3.2026",
+        "client": "Other",
+        "revenue": 135000.0,
+        "profit": 135000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "49тп-глс  от 30.4.2026",
+        "client": "Other",
+        "revenue": 135000.0,
+        "profit": 135000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "50тп-глс  от 31.5.2026",
+        "client": "Other",
+        "revenue": 135000.0,
+        "profit": 135000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "51тп-глс  от 30.6.2026",
+        "client": "Other",
+        "revenue": 135000.0,
+        "profit": 135000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "52тп-глс  от 31.7.2026",
+        "client": "Other",
+        "revenue": 135000.0,
+        "profit": 135000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "7рб-спф  от 31.3.2026",
+        "client": "Other",
+        "revenue": 133110.0,
+        "profit": 133110.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "65ли-sol1  от 31.3.2026",
+        "client": "Other",
+        "revenue": 130000.0,
+        "profit": 130000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "66ли-sol1  от 30.4.2026",
+        "client": "Other",
+        "revenue": 130000.0,
+        "profit": 130000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.1.2026",
+        "client": "Other",
+        "revenue": 127980.0,
+        "profit": 127980.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "84тп  от 23.3.2026",
+        "client": "Other",
+        "revenue": 127680.0,
+        "profit": 127680.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "85тп  от 31.3.2026",
+        "client": "Other",
+        "revenue": 127680.0,
+        "profit": 127680.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "86тп  от 30.4.2026",
+        "client": "Other",
+        "revenue": 127680.0,
+        "profit": 127680.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "87тп  от 30.6.2026",
+        "client": "Other",
+        "revenue": 127680.0,
+        "profit": 127680.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "88тп  от 31.7.2026",
+        "client": "Other",
+        "revenue": 127680.0,
+        "profit": 127680.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "89тп  от 31.7.2026",
+        "client": "Other",
+        "revenue": 127680.0,
+        "profit": 127680.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.5.2026",
+        "client": "Other",
+        "revenue": 127680.0,
+        "profit": 127680.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "100-12/08/  от 21.5.2026",
+        "client": "Other",
+        "revenue": 126000.0,
+        "profit": 126000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "90-12/08/  от 20.2.2026",
+        "client": "Other",
+        "revenue": 126000.0,
+        "profit": 126000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000033  от 28.2.2026",
+        "client": "Other",
+        "revenue": 114102.03000000003,
+        "profit": 114102.03000000003,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "19-мсг  от 31.5.2026",
+        "client": "Other",
+        "revenue": 108500.0,
+        "profit": 108500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.3.2026",
+        "client": "Other",
+        "revenue": 107951.59000000003,
+        "profit": 107951.59000000003,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "96-12/08/2  от 21.4.2026",
+        "client": "Other",
+        "revenue": 103600.0,
+        "profit": 103600.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.5.2026",
+        "client": "Other",
+        "revenue": 101818.51999999999,
+        "profit": 101818.51999999999,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "182рб/14/0  от 30.4.2026",
+        "client": "Other",
+        "revenue": 100980.0,
+        "profit": 100980.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "45ли-глс  от 28.2.2026",
+        "client": "Other",
+        "revenue": 100000.0,
+        "profit": 100000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "46ли-глс  от 31.3.2026",
+        "client": "Other",
+        "revenue": 100000.0,
+        "profit": 100000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "47ли-глс  от 30.4.2026",
+        "client": "Other",
+        "revenue": 100000.0,
+        "profit": 100000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "48ли-глс  от 31.5.2026",
+        "client": "Other",
+        "revenue": 100000.0,
+        "profit": 100000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "49ли-глс  от 30.6.2026",
+        "client": "Other",
+        "revenue": 100000.0,
+        "profit": 100000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "50ли-глс  от 31.7.2026",
+        "client": "Other",
+        "revenue": 100000.0,
+        "profit": 100000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.5.2026",
+        "client": "Other",
+        "revenue": 100000.0,
+        "profit": 100000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "64ли-sol1  от 28.2.2026",
+        "client": "Other",
+        "revenue": 100000.0,
+        "profit": 100000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "68ли-sol1  от 31.5.2026",
+        "client": "Other",
+        "revenue": 100000.0,
+        "profit": 100000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "69ли-sol1  от 30.6.2026",
+        "client": "Other",
+        "revenue": 100000.0,
+        "profit": 100000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "70ли-sol1  от 31.7.2026",
+        "client": "Other",
+        "revenue": 100000.0,
+        "profit": 100000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "11тп-спф  от 30.4.2026",
+        "client": "Other",
+        "revenue": 91800.0,
+        "profit": 91800.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "12тп-спф  от 31.5.2026",
+        "client": "Other",
+        "revenue": 91800.0,
+        "profit": 91800.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "13тп-спф  от 30.6.2026",
+        "client": "Other",
+        "revenue": 91800.0,
+        "profit": 91800.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "14тп-спф  от 31.7.2026",
+        "client": "Other",
+        "revenue": 91800.0,
+        "profit": 91800.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "80-2sglm  от 23.3.2026",
+        "client": "Soglasie",
+        "revenue": 91800.0,
+        "profit": 91800.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "85-12/08/2  от 5.2.2026",
+        "client": "Other",
+        "revenue": 89600.0,
+        "profit": 89600.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "99-12/08/2  от 21.4.2026",
+        "client": "Other",
+        "revenue": 89600.0,
+        "profit": 89600.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "11ли-мсг25  от 30.6.2026",
+        "client": "Other",
+        "revenue": 80000.0,
+        "profit": 80000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "18р/1/sgl/  от 30.6.2026",
+        "client": "Soglasie",
+        "revenue": 78030.0,
+        "profit": 78030.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "17  от 31.3.2026",
+        "client": "Other",
+        "revenue": 77000.0,
+        "profit": 77000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "Sberbank ins. AUTO KASKO",
+        "client": "Sberbank",
+        "revenue": 596500.66,
+        "profit": 76008.8860113289,
+        "margin_pct": 12.7,
+        "dev_hours": 65.25,
+        "pm_hours": 8.459999999999999,
+        "sm_hours": 24.599999999999998,
+        "pct_pm": 13.0,
+        "pct_sm": 37.7,
+        "cc_dev": 5554.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_SM_OVERHEAD"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "10ли-мсг25  от 31.5.2026",
+        "client": "Other",
+        "revenue": 70000.0,
+        "profit": 70000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "12ли-мсг25  от 31.7.2026",
+        "client": "Other",
+        "revenue": 70000.0,
+        "profit": 70000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "8ли-мсг250  от 31.3.2026",
+        "client": "Other",
+        "revenue": 70000.0,
+        "profit": 70000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "9ли-мсг250  от 30.4.2026",
+        "client": "Other",
+        "revenue": 70000.0,
+        "profit": 70000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "129/1/sgl/  от 31.5.2026",
+        "client": "Soglasie",
+        "revenue": 68850.0,
+        "profit": 68850.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 28.2.2026",
+        "client": "Other",
+        "revenue": 66555.0,
+        "profit": 66555.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "10рб-спф  от 30.6.2026",
+        "client": "Other",
+        "revenue": 64260.0,
+        "profit": 64260.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "8рб-спф  от 30.4.2026",
+        "client": "Other",
+        "revenue": 64260.0,
+        "profit": 64260.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "126/1/sgl/  от 28.2.2026",
+        "client": "Soglasie",
+        "revenue": 64260.0,
+        "profit": 64260.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "127/1/sgl/  от 31.3.2026",
+        "client": "Soglasie",
+        "revenue": 64260.0,
+        "profit": 64260.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "128/1/sgl/  от 30.4.2026",
+        "client": "Soglasie",
+        "revenue": 64260.0,
+        "profit": 64260.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "130тп/1/sg  от 30.6.2026",
+        "client": "Other",
+        "revenue": 64260.0,
+        "profit": 64260.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "131тп/1/sg  от 31.7.2026",
+        "client": "Other",
+        "revenue": 64260.0,
+        "profit": 64260.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 28.2.2026",
+        "client": "Other",
+        "revenue": 62652.79999999999,
+        "profit": 62652.79999999999,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "Sberbank ins. AUTO OSAGO",
+        "client": "Sberbank",
+        "revenue": 882451.0,
+        "profit": 59885.83286798629,
+        "margin_pct": 6.8,
+        "dev_hours": 167.75,
+        "pm_hours": 8.459999999999999,
+        "sm_hours": 0,
+        "pct_pm": 5.0,
+        "pct_sm": null,
+        "cc_dev": 5090.0,
+        "infra": 0.0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "LOW_MARGIN"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "10-спф  от 31.3.2026",
+        "client": "Other",
+        "revenue": 57500.0,
+        "profit": 57500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "11-спф  от 30.4.2026",
+        "client": "Other",
+        "revenue": 57500.0,
+        "profit": 57500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "12-спф  от 31.5.2026",
+        "client": "Other",
+        "revenue": 57500.0,
+        "profit": 57500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "13-спф  от 30.6.2026",
+        "client": "Other",
+        "revenue": 57500.0,
+        "profit": 57500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "14-спф  от 31.7.2026",
+        "client": "Other",
+        "revenue": 57500.0,
+        "profit": 57500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "9-спф  от 28.2.2026",
+        "client": "Other",
+        "revenue": 57500.0,
+        "profit": 57500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "36тп-solts  от 28.2.2026",
+        "client": "Other",
+        "revenue": 52500.0,
+        "profit": 52500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "37тп-solts  от 31.3.2026",
+        "client": "Other",
+        "revenue": 52500.0,
+        "profit": 52500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "38тп-solts  от 30.4.2026",
+        "client": "Other",
+        "revenue": 52500.0,
+        "profit": 52500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "39тп-solts  от 31.5.2026",
+        "client": "Other",
+        "revenue": 52500.0,
+        "profit": 52500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "40тп-solts  от 30.6.2026",
+        "client": "Other",
+        "revenue": 52500.0,
+        "profit": 52500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "41тп-solts  от 31.7.2026",
+        "client": "Other",
+        "revenue": 52500.0,
+        "profit": 52500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "17р/1/sgl/  от 31.5.2026",
+        "client": "Soglasie",
+        "revenue": 50490.0,
+        "profit": 50490.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "362ли-01/1  от 31.1.2026",
+        "client": "Other",
+        "revenue": 50000.0,
+        "profit": 50000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "366ли-01/1  от 28.2.2026",
+        "client": "Other",
+        "revenue": 50000.0,
+        "profit": 50000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "370ли-01/1  от 31.3.2026",
+        "client": "Other",
+        "revenue": 50000.0,
+        "profit": 50000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "374ли-01/1  от 30.4.2026",
+        "client": "Other",
+        "revenue": 50000.0,
+        "profit": 50000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "378ли-01/1  от 31.5.2026",
+        "client": "Other",
+        "revenue": 50000.0,
+        "profit": 50000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "382ли-01/1  от 30.6.2026",
+        "client": "Other",
+        "revenue": 50000.0,
+        "profit": 50000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "386ли-01/1  от 31.7.2026",
+        "client": "Other",
+        "revenue": 50000.0,
+        "profit": 50000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "98-12/08/2  от 21.4.2026",
+        "client": "Other",
+        "revenue": 49000.0,
+        "profit": 49000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "87-2sglm  от 5.6.2026",
+        "client": "Soglasie",
+        "revenue": 46200.0,
+        "profit": 46200.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "80  от 30.4.2026",
+        "client": "Other",
+        "revenue": 45900.0,
+        "profit": 45900.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "mng от 31.7.2026",
+        "client": "Other",
+        "revenue": 45900.0,
+        "profit": 45900.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "6ли-мсг250  от 31.1.2026",
+        "client": "Other",
+        "revenue": 45000.0,
+        "profit": 45000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "7ли-мсг250  от 28.2.2026",
+        "client": "Other",
+        "revenue": 45000.0,
+        "profit": 45000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "128/1/sgl/  от 30.4.2026",
+        "client": "Soglasie",
+        "revenue": 44712.0,
+        "profit": 44712.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "18-мсг  от 31.5.2026",
+        "client": "Other",
+        "revenue": 42000.0,
+        "profit": 42000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "102-12/08/  от 31.5.2026",
+        "client": "Other",
+        "revenue": 42000.0,
+        "profit": 42000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "93-12/08/2  от 12.3.2026",
+        "client": "Other",
+        "revenue": 42000.0,
+        "profit": 42000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "129/1/sgl/  от 31.5.2026",
+        "client": "Soglasie",
+        "revenue": 41140.0,
+        "profit": 41140.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "19р/1/sgl/  от 30.6.2026",
+        "client": "Soglasie",
+        "revenue": 36720.0,
+        "profit": 36720.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "183рб/14/0  от 31.5.2026",
+        "client": "Other",
+        "revenue": 36720.0,
+        "profit": 36720.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "94-12/08/2  от 17.3.2026",
+        "client": "Other",
+        "revenue": 36400.0,
+        "profit": 36400.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "84  от 30.6.2026",
+        "client": "Other",
+        "revenue": 34425.0,
+        "profit": 34425.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "97-12/08/2  от 21.4.2026",
+        "client": "Other",
+        "revenue": 33600.0,
+        "profit": 33600.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "21-мсг  от 29.6.2026",
+        "client": "Other",
+        "revenue": 31500.0,
+        "profit": 31500.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "127/1/sgl/  от 31.3.2026",
+        "client": "Soglasie",
+        "revenue": 30440.0,
+        "profit": 30440.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "126/1/sgl/  от 28.2.2026",
+        "client": "Soglasie",
+        "revenue": 25320.0,
+        "profit": 25320.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "91-12/08/2  от 11.3.2026",
+        "client": "Other",
+        "revenue": 25200.0,
+        "profit": 25200.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "20-мсг  от 29.6.2026",
+        "client": "Other",
+        "revenue": 23800.0,
+        "profit": 23800.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "130ли/1/sg  от 30.6.2026",
+        "client": "Other",
+        "revenue": 23000.0,
+        "profit": 23000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "131ли/1/sg  от 31.7.2026",
+        "client": "Other",
+        "revenue": 23000.0,
+        "profit": 23000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "89-12/08/2  от 20.2.2026",
+        "client": "Other",
+        "revenue": 22400.0,
+        "profit": 22400.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "16-мсг  от 27.1.2026",
+        "client": "Other",
+        "revenue": 21000.0,
+        "profit": 21000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "79-2sglm  от 23.3.2026",
+        "client": "Soglasie",
+        "revenue": 20748.0,
+        "profit": 20748.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "360ли-01/1  от 31.1.2026",
+        "client": "Other",
+        "revenue": 20000.0,
+        "profit": 20000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "364ли-01/1  от 28.2.2026",
+        "client": "Other",
+        "revenue": 20000.0,
+        "profit": 20000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "368ли-01/1  от 31.3.2026",
+        "client": "Other",
+        "revenue": 20000.0,
+        "profit": 20000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "372ли-01/1  от 30.4.2026",
+        "client": "Other",
+        "revenue": 20000.0,
+        "profit": 20000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "376ли-01/1  от 31.5.2026",
+        "client": "Other",
+        "revenue": 20000.0,
+        "profit": 20000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "380ли-01/1  от 30.6.2026",
+        "client": "Other",
+        "revenue": 20000.0,
+        "profit": 20000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "384ли-01/1  от 31.7.2026",
+        "client": "Other",
+        "revenue": 20000.0,
+        "profit": 20000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000032  от 28.2.2026",
+        "client": "Other",
+        "revenue": 15000.0,
+        "profit": 15000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000043  от 31.3.2026",
+        "client": "Other",
+        "revenue": 15000.0,
+        "profit": 15000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000057  от 30.4.2026",
+        "client": "Other",
+        "revenue": 15000.0,
+        "profit": 15000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000073  от 31.5.2026",
+        "client": "Other",
+        "revenue": 15000.0,
+        "profit": 15000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000086  от 30.6.2026",
+        "client": "Other",
+        "revenue": 15000.0,
+        "profit": 15000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000099  от 31.7.2026",
+        "client": "Other",
+        "revenue": 15000.0,
+        "profit": 15000.0,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000076  от 31.5.2026",
+        "client": "Other",
+        "revenue": 13669.76999999999,
+        "profit": 13669.76999999999,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000047  от 31.3.2026",
+        "client": "Other",
+        "revenue": 13333.320000000007,
+        "profit": 13333.320000000007,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000101  от 31.7.2026",
+        "client": "Other",
+        "revenue": 11521.23000000001,
+        "profit": 11521.23000000001,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000061  от 30.4.2026",
+        "client": "Other",
+        "revenue": 11077.299999999988,
+        "profit": 11077.299999999988,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "00бп-000088  от 30.6.2026",
+        "client": "Other",
+        "revenue": 10414.73000000001,
+        "profit": 10414.73000000001,
+        "margin_pct": 100.0,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "green"
+      },
+      {
+        "project": "Chulpan",
+        "client": "Other",
+        "revenue": 90000.0,
+        "profit": 2761.2139505109517,
+        "margin_pct": 3.1,
+        "dev_hours": 1.0,
+        "pm_hours": 17.2,
+        "sm_hours": 0,
+        "pct_pm": 1720.0,
+        "pct_sm": null,
+        "cc_dev": 3486.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_PM_OVERHEAD",
+          "LOW_MARGIN"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "Gelios_Travel",
+        "client": "Gelios",
+        "revenue": 1487000.0,
+        "profit": -2896.258007205557,
+        "margin_pct": -0.2,
+        "dev_hours": 63.167,
+        "pm_hours": 66.67000000000002,
+        "sm_hours": 60.25,
+        "pct_pm": 105.5,
+        "pct_sm": 95.4,
+        "cc_dev": 5232.0,
+        "infra": -569400.719918264,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_PM_OVERHEAD",
+          "HIGH_SM_OVERHEAD",
+          "NEGATIVE_MARGIN",
+          "HIGH_INFRA"
+        ],
+        "health": "red"
+      },
+      {
+        "project": "Askor Travel",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -11912.349438313897,
+        "margin_pct": null,
+        "dev_hours": 3.5,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": 4172.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "REVIEW"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "MSG",
+        "client": "Other",
+        "revenue": 1198300.0,
+        "profit": -366208.1346332226,
+        "margin_pct": -30.6,
+        "dev_hours": 363.75,
+        "pm_hours": 21.39,
+        "sm_hours": 0,
+        "pct_pm": 5.9,
+        "pct_sm": null,
+        "cc_dev": 4628.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "NEGATIVE_MARGIN"
+        ],
+        "health": "red"
+      },
+      {
+        "project": "NPF Soglasie",
+        "client": "Soglasie",
+        "revenue": 2928710.0,
+        "profit": -755206.3177355654,
+        "margin_pct": -25.8,
+        "dev_hours": 699.4159999999999,
+        "pm_hours": 112.2,
+        "sm_hours": 128.8,
+        "pct_pm": 16.0,
+        "pct_sm": 18.4,
+        "cc_dev": 4618.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "HIGH_PM_OVERHEAD",
+          "HIGH_SM_OVERHEAD",
+          "NEGATIVE_MARGIN"
+        ],
+        "health": "red"
+      }
+    ],
+    "internal_allocations": [
+      {
+        "project": "клейн татьяна юрьевна",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -380348.00350000005,
+        "margin_pct": null,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 68.60000000000001,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": 6796.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "дорофеева юлия сергеевна",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -1776.965998809524,
+        "margin_pct": null,
+        "dev_hours": 1.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": 2178.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "патрушева ольга анатольевна",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -4627.25745,
+        "margin_pct": null,
+        "dev_hours": 1.5,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": 3781.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "пустохин алексей владимирович",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -5508.125989504373,
+        "margin_pct": null,
+        "dev_hours": 1.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": 6751.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "васькина виктория александровна",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -846.821621567377,
+        "margin_pct": null,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "кочетков никита николаевич",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -5265.683677999999,
+        "margin_pct": null,
+        "dev_hours": 0.0,
+        "pm_hours": 1.2,
+        "sm_hours": 0,
+        "pct_pm": 0.0,
+        "pct_sm": null,
+        "cc_dev": 5379.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "купченков артем вячеславович",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -5252.209035227272,
+        "margin_pct": null,
+        "dev_hours": 1.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": 6438.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "суханова евгения игоревна",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -287.7459341869193,
+        "margin_pct": null,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "царёва анастасия вадимовна",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -41236.317325,
+        "margin_pct": null,
+        "dev_hours": 0.0,
+        "pm_hours": 16.0,
+        "sm_hours": 0,
+        "pct_pm": 0.0,
+        "pct_sm": null,
+        "cc_dev": 3159.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "шуст александр валерьевич",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -745.9077128703129,
+        "margin_pct": null,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "ахмарова юлия ильшатовна",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -561.8261765129847,
+        "margin_pct": null,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "барышев никита аркадьевич",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -1766.422772270864,
+        "margin_pct": null,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "башилов иван андреевич",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -2300.2745053032277,
+        "margin_pct": null,
+        "dev_hours": 1.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": 2819.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "белецкая наталья владимировна",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -2807.4851890380223,
+        "margin_pct": null,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "боржанский арсений алексеевич",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -585.6867274735573,
+        "margin_pct": null,
+        "dev_hours": 0.167,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": 4299.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "васькина виктория александровна",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -3469.977838517937,
+        "margin_pct": null,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "денисова ольга анатольевна",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -612.6528803960548,
+        "margin_pct": null,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": null,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "дорофеева юлия сергеевна",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -16181.631520303405,
+        "margin_pct": null,
+        "dev_hours": 9.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": 2204.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "конкин максим сергеевич",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -336159.277201,
+        "margin_pct": null,
+        "dev_hours": 0.0,
+        "pm_hours": 0,
+        "sm_hours": 60.25,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": 6839.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      },
+      {
+        "project": "коротков андрей викторович",
+        "client": "Other",
+        "revenue": 0.0,
+        "profit": -80458.3775831621,
+        "margin_pct": null,
+        "dev_hours": 20.0,
+        "pm_hours": 0,
+        "sm_hours": 0,
+        "pct_pm": null,
+        "pct_sm": null,
+        "cc_dev": 4931.0,
+        "infra": 0,
+        "direct_expenses": 0,
+        "root_causes": [
+          "INTERNAL_ALLOC"
+        ],
+        "health": "yellow"
+      }
+    ]
+  }
+}
